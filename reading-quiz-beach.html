@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading & Quiz - A Peaceful Day at the Beach</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f8fb; margin:0; }
+    header {
+      background:white; padding:16px; color:#2563eb; font-size:22px;
+      text-align:center; font-weight:bold; border-bottom:2px solid #e5e7eb;
+    }
+    .container {
+      display:flex; gap:20px; padding:20px; max-width:1200px; margin:auto;
+    }
+    .reading-box, .quiz-box {
+      background:white; padding:20px; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      flex:1; max-height:80vh; overflow-y:auto;
+    }
+    h2 { margin-top:0; color:#1e3a8a; }
+    p { line-height:1.6; margin-bottom:15px; }
+    .question { margin-bottom:20px; }
+    button {
+      background:#2563eb; color:white; padding:10px 18px;
+      border:none; border-radius:8px; cursor:pointer; font-size:16px;
+    }
+    button:hover { background:#1e40af; }
+    .back-buttons { margin-top:20px; display:flex; gap:10px; }
+    .back-buttons a {
+      padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:bold;
+    }
+    .back-home { background:#2563eb; color:white; }
+    .back-home:hover { background:#1e40af; }
+    .back-vocab {
+      background:#f3f4f6; color:#2563eb; border:1px solid #2563eb;
+    }
+    .back-vocab:hover { background:#e0e7ff; }
+  </style>
+</head>
+<body>
+
+<header>Readify 24/7</header>
+
+<div class="container">
+
+  <div class="reading-box">
+    <h2>A Peaceful Day at the Beach</h2>
+
+    <p>The beach is one of the most relaxing places I know. Last Sunday, my family and I spent the whole day at the beach to enjoy the warm weather and fresh air. The sun was shining brightly, and the waves were calm, making it a perfect day for outdoor fun.</p>
+
+    <p>We arrived in the morning and quickly set up our spot under a big umbrella. My younger brother and I went swimming, while my parents relaxed on the sand and read books. After swimming, I built a tall sandcastle with a moat around it. It wasn't easy, but it was fun and satisfying.</p>
+
+    <p>Later, we had lunch together—sandwiches, fruit, and cold drinks. We also collected seashells and took a short walk along the shore. The sound of the waves and the smell of the sea made me feel calm and happy.</p>
+
+    <p>Before going home, we watched the sunset. The sky turned beautiful shades of orange, pink, and purple. It was the perfect ending to a wonderful day. I really enjoy spending time at the beach because it helps me relax and feel close to nature.</p>
+  </div>
+
+  <div class="quiz-box">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <!-- 1 Multiple Choice -->
+      <div class="question">
+        <p><b>1. What did the narrator and the brother do first at the beach?</b></p>
+        <label><input type="radio" name="q1" value="a"> Ate lunch</label><br>
+        <label><input type="radio" name="q1" value="b"> Went swimming</label><br>
+        <label><input type="radio" name="q1" value="c"> Collected seashells</label>
+      </div>
+
+      <!-- 2 Multiple Choice -->
+      <div class="question">
+        <p><b>2. What made the narrator feel calm and happy?</b></p>
+        <label><input type="radio" name="q2" value="a"> The sound of cars</label><br>
+        <label><input type="radio" name="q2" value="b"> The sound of the waves</label><br>
+        <label><input type="radio" name="q2" value="c"> The crowded beach</label>
+      </div>
+
+      <!-- 3 True/False -->
+      <div class="question">
+        <p><b>3. The family watched the sunrise. (True/False)</b></p>
+        <label><input type="radio" name="q3" value="true"> True</label><br>
+        <label><input type="radio" name="q3" value="false"> False</label>
+      </div>
+
+      <!-- 4 True/False -->
+      <div class="question">
+        <p><b>4. The narrator built a sandcastle with a moat. (True/False)</b></p>
+        <label><input type="radio" name="q4" value="true"> True</label><br>
+        <label><input type="radio" name="q4" value="false"> False</label>
+      </div>
+
+      <!-- 5 Vocabulary in context -->
+      <div class="question">
+        <p><b>5. What does the word "calm" mean in the story?</b></p>
+        <label><input type="radio" name="q5" value="a"> Very noisy</label><br>
+        <label><input type="radio" name="q5" value="b"> Peaceful</label><br>
+        <label><input type="radio" name="q5" value="c"> Dangerous</label>
+      </div>
+
+      <!-- 6 Vocabulary in context -->
+      <div class="question">
+        <p><b>6. The word "shore" refers to...</b></p>
+        <label><input type="radio" name="q6" value="a"> The edge of the sea</label><br>
+        <label><input type="radio" name="q6" value="b"> The middle of the ocean</label><br>
+        <label><input type="radio" name="q6" value="c"> A mountain area</label>
+      </div>
+
+      <!-- 7 HOTS MCQ -->
+      <div class="question">
+        <p><b>7. Why was the day perfect for outdoor fun?</b></p>
+        <label><input type="radio" name="q7" value="a"> The weather was warm and the waves were calm</label><br>
+        <label><input type="radio" name="q7" value="b"> There were no people at the beach</label><br>
+        <label><input type="radio" name="q7" value="c"> The family brought a lot of food</label>
+      </div>
+
+      <!-- 8 Vocabulary -->
+      <div class="question">
+        <p><b>8. The word "relax" in the last sentence is closest in meaning to...</b></p>
+        <label><input type="radio" name="q8" value="a"> Feel stressed</label><br>
+        <label><input type="radio" name="q8" value="b"> Feel annoyed</label><br>
+        <label><input type="radio" name="q8" value="c"> Feel rested</label>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="vocab-beach.html" class="back-vocab">Vocabulary</a>
+      <a href="index.html" class="back-home">🏠 Home</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "false",
+    q4: "true",
+    q5: "b",
+    q6: "a",
+    q7: "a",
+    q8: "c"
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let output = "";
+
+    for (let q in answers) {
+      const checked = document.querySelector(`input[name="${q}"]:checked`);
+      let user = checked ? checked.value.trim().toLowerCase() : "";
+      const correct = answers[q];
+
+      if (user === "") {
+        output += `<p><b>${q.toUpperCase()}</b>: ❌ No answer — Jawaban yang benar: <i>${correct}</i></p>`;
+      } else if (user === correct) {
+        score++;
+        output += `<p><b>${q.toUpperCase()}</b>: ✅ Correct</p>`;
+      } else {
+        output += `<p><b>${q.toUpperCase()}</b>: ❌ Wrong — Jawaban yang benar: <i>${correct}</i></p>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      `<h3>Your Score: ${score}/${total}</h3>` + output;
+  }
+</script>
+
+
+</body>
+</html>

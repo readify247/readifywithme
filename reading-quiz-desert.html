@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surviving the Desert Storm - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f8fb; margin:0; }
+    header { text-align:center; padding:14px 0; background:#fff; box-shadow:0 1px 0 rgba(0,0,0,0.04); }
+    header h1 { margin:0; color:#173b8a; }
+    .container { display:flex; gap:24px; max-width:1100px; margin:28px auto; padding:12px; }
+    .reading-section, .quiz-section { background:#fff; border-radius:12px; padding:20px; box-shadow:0 6px 18px rgba(15,23,42,0.06); overflow:auto; max-height:80vh; }
+    .reading-section { flex:1.2 }
+    .quiz-section { flex:0.8 }
+    h2 { color:#1e3a8a; margin-top:0 }
+    .story p { margin-bottom:14px; line-height:1.7; color:#222; text-align:justify; }
+    .question { margin-bottom:16px }
+    .question p { font-weight:700; margin-bottom:8px }
+    .options label { display:block; margin-bottom:8px; padding:8px; border-radius:6px; border:1px solid #ececec; cursor:pointer }
+    .options label:hover { background:#f0f9ff }
+    select, input[type="text"] { padding:8px; border-radius:6px; border:1px solid #ccc; width:100%; box-sizing:border-box }
+    .btn { display:inline-block; padding:10px 16px; border-radius:8px; font-weight:700; cursor:pointer; border:none }
+    .btn-submit { background:#2563eb; color:#fff }
+    .btn-home { background:#2563eb; color:#fff; text-decoration:none }
+    .btn-vocab { background:#f3f4f6; color:#2563eb; border:1px solid #2563eb; text-decoration:none }
+    #result { margin-top:18px; line-height:1.6 }
+    .back { margin-top:14px; display:flex; gap:10px; flex-wrap:wrap }
+    @media (max-width:900px){ .container{flex-direction:column} .reading-section, .quiz-section{max-height:none} }
+  </style>
+</head>
+<body>
+  <header><h1>Readify 24/7</h1></header>
+
+  <div class="container">
+    <div class="reading-section">
+      <h2>Surviving the Desert Storm</h2>
+      <div class="story">
+        <p>It was supposed to be a fun trip. My uncle, a photographer, invited me to join him on a journey to the Sahara Desert. He said we would take photos of sand dunes and camels. I was so excited. But things didn't go as planned.</p>
+
+        <p>On the third day of the trip, while exploring far from our base camp, a huge sandstorm suddenly hit. The sky turned orange and the wind blew hard, making it almost impossible to see. I held my scarf tight over my face, but the sand stung my skin like needles. My uncle shouted, "Stay close!" but the wind was too loud—I couldn't hear him. In just seconds, we were separated.</p>
+
+        <p>I tried to walk in the direction I thought was right, but I soon realized I was completely lost. There was no phone signal, and the sun was starting to set. My water bottle was half full, and I had no food. I knew I had to stay calm. I found a large rock and sat behind it to block the wind. I remembered what I learned from a survival show—move as little as possible, save water, and look for shelter.</p>
+
+        <p>That night, the desert was freezing. I used my scarf as a blanket and tried to sleep, but the cold kept me awake. The next morning, I looked for signs—footprints, camel tracks—anything. After walking for hours under the hot sun, I saw something shiny in the distance.</p>
+
+        <p>It was our camp's solar panel! I ran with the little energy I had left and shouted for help. My uncle and the guide found me just in time. I was weak and tired, but safe. That moment taught me that nature is beautiful but also dangerous. Since then, I always prepare better for every trip. Surviving that night in the desert made me stronger and more thankful for simple things like water, warmth, and family.</p>
+      </div>
+      <p style="font-size:13px;color:#666;margin-top:12px">.</p>
+    </div>
+
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <!-- Multiple Choice (HOTS) -->
+        <div class="question">
+          <p>1. Why was the narrator separated from his uncle during the storm?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> They argued and walked in opposite directions.</label>
+            <label><input type="radio" name="q1" value="b"> The wind was too loud and visibility was poor.</label>
+            <label><input type="radio" name="q1" value="c"> The uncle left on purpose to find help.</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. What strategy did the narrator use to survive the sandstorm night?</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> Kept walking to find water.</label>
+            <label><input type="radio" name="q2" value="b"> Hid behind a rock, conserved water, and stayed still.</label>
+            <label><input type="radio" name="q2" value="c"> Climbed a dune to get a better view.</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. Which detail best shows the narrator was running out of resources?</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> He had no camera with him.</label>
+            <label><input type="radio" name="q3" value="b"> His water bottle was half full and he had no food.</label>
+            <label><input type="radio" name="q3" value="c"> He sang to stay awake.</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. What finally helped the narrator get rescued?</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="a"> He found a village.</label>
+            <label><input type="radio" name="q4" value="b"> He saw the camp's solar panel and called for help.</label>
+            <label><input type="radio" name="q4" value="c"> He used a flare to signal.</label>
+          </div>
+        </div>
+
+        <!-- True/False with reason -->
+        <div class="question">
+          <p>5. True or False: The narrator had a working phone signal during the storm.</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="true"> True</label>
+            <label><input type="radio" name="q5" value="false"> False</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6. True or False: The narrator stayed calm and used knowledge from a survival show.</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="true"> True</label>
+            <label><input type="radio" name="q6" value="false"> False</label>
+          </div>
+        </div>
+
+        <!-- Vocabulary in context -->
+        <div class="question">
+          <p>7. In the story, what does the phrase "save water" most nearly mean?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> Use water quickly</label>
+            <label><input type="radio" name="q7" value="b"> Conserve water and drink very little</label>
+            <label><input type="radio" name="q7" value="c"> Throw water away</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>8. In context, what does "solar panel" refer to?</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> A shiny metal tool for digging</label>
+            <label><input type="radio" name="q8" value="b"> A device that uses sunlight to produce electricity</label>
+            <label><input type="radio" name="q8" value="c"> A type of shelter made of fabric</label>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-submit" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back">
+        <a href="index.html" class="btn btn-home">🏠 Back to Home</a>
+        <a href="vocab-desert.html" class="btn btn-vocab">📚 Vocabulary</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const answers = {
+    q1: 'b',
+    q2: 'b',
+    q3: 'b',
+    q4: 'b',
+    q5: 'false',
+    q6: 'true',
+    q7: 'b',
+    q8: 'b'
+  };
+
+  const explanations = {
+    q1: 'Wind and poor visibility separated them.',
+    q2: 'He hid behind a rock, conserved water, and stayed as still as possible.',
+    q3: 'He mentions his water bottle was half full and he had no food.',
+    q4: 'He spotted the camp\'s solar panel and shouted for help.',
+    q5: 'There was no phone signal during the storm.',
+    q6: 'He followed survival advice: move little, save water, find shelter.',
+    q7: 'In this context, save water means to conserve it and drink very little.',
+    q8: 'A solar panel is a device that converts sunlight into electricity.'
+  };
+
+  function submitQuiz(){
+    let score = 0;
+    let out = '';
+    const total = Object.keys(answers).length;
+
+    for (let q in answers){
+      const el = document.querySelector(`input[name="${q}"]:checked`);
+      if (!el){
+        out += `<p><b>${q.toUpperCase()}</b>: Not answered ❌ — ${explanations[q]}</p>`;
+        continue;
+      }
+      const val = el.value;
+      if (val === answers[q]){ score++; out += `<p><b>${q.toUpperCase()}</b>: Correct ✅ — ${explanations[q]}</p>`; }
+      else { out += `<p><b>${q.toUpperCase()}</b>: Wrong ❌ — ${explanations[q]}</p>`; }
+    }
+
+    document.getElementById('result').innerHTML = `<h3>You scored ${score} out of ${total}</h3>` + out;
+    document.getElementById('result').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+</script>
+</body>
+</html>

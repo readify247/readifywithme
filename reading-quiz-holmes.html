@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reading & Quiz - Little Holmes and the Mystery in the Museum</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f8fb; margin:0; }
+
+    header {
+      background:white; padding:16px; color:#2563eb; font-size:22px;
+      text-align:center; font-weight:bold; border-bottom:2px solid #e5e7eb;
+    }
+
+    .container {
+      display:flex; gap:20px; padding:20px; max-width:1200px; margin:auto;
+    }
+
+    .reading-box, .quiz-box {
+      background:white; padding:20px; border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      flex:1; max-height:80vh; overflow-y:auto;
+    }
+
+    h2 { margin-top:0; color:#1e3a8a; }
+    p { line-height:1.6; margin-bottom:15px; }
+
+    .question { margin-bottom:20px; }
+
+    button {
+      background:#2563eb; color:white; padding:10px 18px;
+      border:none; border-radius:8px; cursor:pointer; font-size:16px;
+    }
+    button:hover { background:#1e40af; }
+
+    .back-buttons { margin-top:20px; display:flex; gap:10px; }
+    .back-buttons a {
+      padding:10px 16px; border-radius:8px; text-decoration:none;
+      font-weight:bold;
+    }
+
+    .back-home { background:#2563eb; color:white; }
+    .back-home:hover { background:#1e40af; }
+
+    .back-vocab {
+      background:#f3f4f6; color:#2563eb; border:1px solid #2563eb;
+    }
+    .back-vocab:hover { background:#e0e7ff; }
+  </style>
+</head>
+
+<body>
+
+<header>Readify 24/7</header>
+
+<div class="container">
+
+  <!-- READING SECTION -->
+  <div class="reading-box">
+    <h2>Little Holmes and the Mystery in the Museum</h2>
+
+    <p>Last Saturday, Little Holmes, a clever boy who loved solving puzzles, visited the city museum with his aunt. The museum was full of ancient statues, paintings, and mysterious artifacts. Everything seemed normal until a loud alarm rang through the halls. A security guard shouted, "Someone has taken the silver compass from the explorer's exhibit!"</p>
+
+    <p>People started to panic, but Little Holmes stayed calm. He carefully observed the room. "The thief didn't break the glass," he said. "That means it must have been someone with a key."</p>
+
+    <p>He talked to the guard and asked who had access to the case. "Only the staff and our guest guide today," the guard replied. Holmes quickly looked at the dusty floor and noticed something strange. There were footprints leading to the dinosaur section.</p>
+
+    <p>He followed the footprints and found a man in a guide uniform standing nervously behind a large T-Rex model. Holmes politely asked, "Why are you hiding here?" The man stuttered and tried to run, but the guard arrived just in time.</p>
+
+    <p>Inside the man's bag, they found the missing compass wrapped in a scarf. The guide admitted he wanted to sell it because it was worth a lot of money.</p>
+
+    <p>Thanks to Little Holmes' sharp eyes and calm thinking, the mystery was solved. The museum gave him a small detective badge as a reward. Holmes smiled and said, "It was elementary, really."</p>
+  </div>
+
+
+  <!-- QUIZ SECTION -->
+  <div class="quiz-box">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <!-- 1: Multiple choice -->
+      <div class="question">
+        <p><b>1. What item was stolen from the museum?</b></p>
+        <label><input type="radio" name="q1" value="a"> A golden ring</label><br>
+        <label><input type="radio" name="q1" value="b"> A silver compass</label><br>
+        <label><input type="radio" name="q1" value="c"> An old statue</label>
+      </div>
+
+      <!-- 2: Multiple choice -->
+      <div class="question">
+        <p><b>2. Why did Holmes think the thief had a key?</b></p>
+        <label><input type="radio" name="q2" value="a"> The glass case was broken</label><br>
+        <label><input type="radio" name="q2" value="b"> The alarm didn’t work</label><br>
+        <label><input type="radio" name="q2" value="c"> The glass case was not broken</label>
+      </div>
+
+      <!-- 3: True/False -->
+      <div class="question">
+        <p><b>3. The footprints led to the dinosaur section. (True/False)</b></p>
+        <label><input type="radio" name="q3" value="true"> True</label><br>
+        <label><input type="radio" name="q3" value="false"> False</label>
+      </div>
+
+      <!-- 4: True/False -->
+      <div class="question">
+        <p><b>4. Holmes found the thief in the museum cafeteria.</b></p>
+        <label><input type="radio" name="q4" value="true"> True</label><br>
+        <label><input type="radio" name="q4" value="false"> False</label>
+      </div>
+
+      <!-- 5: Vocabulary in context -->
+      <div class="question">
+        <p><b>5. The word “artifact” in the story refers to...</b></p>
+        <label><input type="radio" name="q5" value="a"> A modern tool</label><br>
+        <label><input type="radio" name="q5" value="b"> An old historical object</label><br>
+        <label><input type="radio" name="q5" value="c"> A type of machine</label>
+      </div>
+
+      <!-- 6: Vocabulary in context -->
+      <div class="question">
+        <p><b>6. What does “elementary” mean in Holmes’ final sentence?</b></p>
+        <label><input type="radio" name="q6" value="a"> Very difficult</label><br>
+        <label><input type="radio" name="q6" value="b"> Very simple</label><br>
+        <label><input type="radio" name="q6" value="c"> Very scary</label>
+      </div>
+
+      <!-- 7: Multiple choice -->
+      <div class="question">
+        <p><b>7. Why did the guide steal the compass?</b></p>
+        <label><input type="radio" name="q7" value="a"> He wanted to study it</label><br>
+        <label><input type="radio" name="q7" value="b"> It was worth a lot of money</label><br>
+        <label><input type="radio" name="q7" value="c"> He needed it for his job</label>
+      </div>
+
+      <!-- 8: Multiple choice HOTS -->
+      <div class="question">
+        <p><b>8. What helped Holmes solve the mystery?</b></p>
+        <label><input type="radio" name="q8" value="a"> His ability to stay calm and observe</label><br>
+        <label><input type="radio" name="q8" value="b"> A clue from the aunt</label><br>
+        <label><input type="radio" name="q8" value="c"> A note left by the thief</label>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="vocab-holmes.html" class="back-vocab">Vocabulary</a>
+      <a href="index.html" class="back-home">🏠 Home</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function submitQuiz() {
+  let score = 0;
+  let total = 8;
+
+  const answers = {
+    q1: "b",
+    q2: "c",
+    q3: "true",
+    q4: "false",
+    q5: "b",
+    q6: "b",
+    q7: "b",
+    q8: "a"
+  };
+
+  for (let q in answers) {
+    const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
+    if (userAnswer && userAnswer.value === answers[q]) score++;
+  }
+
+  document.getElementById("result").innerHTML =
+    `<h3>You scored ${score} out of ${total}</h3>`;
+}
+</script>
+
+</body>
+</html>

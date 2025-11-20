@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Importance of Museums – Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-section">
+      <h2>The Importance of Museums</h2>
+      <div class="story">
+
+        <p>Museums are seen in every city, in every part of the world. They act as valuable storage houses for the history of human civilization and the evolution of life on this planet. In this text, we will discuss the importance that museums hold in our lives.</p>
+
+        <p>The role of museums today is the preservation of history. Museums store artifacts that have cultural, religious, scientific, and historical value that represent significant turning points in the history of mankind and the planet. Thanks to museums, we can look at objects that mark major human achievements. They provide tangible proof of history and help us understand ourselves in context. Museums preserve cultural remnants and provide evidence of human survival through the ages.</p>
+
+        <p>Museums also play an essential role in education. Education is incomplete without cultural knowledge and awareness, and museums support this by housing the cultural history of a nation and its people, as well as other civilizations. Without museums, cultural history would rely only on verbal explanations, which are far less impactful because they lack physical interaction with real objects.</p>
+
+        <p>Humanity cannot move forward without understanding its past, and museums provide a crucial window into history. The artifacts displayed help us understand where we came from and shape where we are going. Historical relics in museums can inspire national pride and encourage a country to achieve greatness again. Without museums, humans would lack awareness of their origins—awareness that is essential for progress.</p>
+
+        <p>For these reasons, we as the young generation must recognize the importance of museums. They are key to learning about our history and identity, and it is essential to preserve them.</p>
+
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <div class="question">
+          <p>1. Museums act as storage houses for the history of human _______.</p>
+          <input type="text" name="q1" />
+        </div>
+
+        <div class="question">
+          <p>2. Museums play a major role in the _______ of history.</p>
+          <input type="text" name="q2" />
+        </div>
+
+        <div class="question">
+          <p>3. Museums store _______ that hold cultural, scientific, and historical value.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <div class="question">
+          <p>4. Museums help provide _______ proof of history.</p>
+          <input type="text" name="q4" />
+        </div>
+
+        <div class="question">
+          <p>5. Education is incomplete without cultural _______.</p>
+          <input type="text" name="q5" />
+        </div>
+
+        <div class="question">
+          <p>6. Museums offer a window into our _______ so we can understand where we came from.</p>
+          <input type="text" name="q6" />
+        </div>
+
+        <div class="question">
+          <p>7. Relics in museums can inspire a spirit of _______.</p>
+          <input type="text" name="q7" />
+        </div>
+
+        <div class="question">
+          <p>8. We must preserve museums because they help us learn our history and _______.</p>
+          <input type="text" name="q8" />
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-museum.html" class="btn-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "civilization", explanation: "Museums store the history of human civilization." },
+      q2: { correct: "preservation", explanation: "Museums play a key role in the preservation of history." },
+      q3: { correct: "artifacts", explanation: "Museums store artifacts with cultural and historical value." },
+      q4: { correct: "tangible", explanation: "Museums give us tangible proof of history." },
+      q5: { correct: "awareness", explanation: "Education is incomplete without cultural awareness." },
+      q6: { correct: "past", explanation: "Museums give us a window into our past." },
+      q7: { correct: "nationality", explanation: "Relics can inspire a spirit of nationality and pride." },
+      q8: { correct: "identity", explanation: "Museums teach us about our history and identity." }
+    };
+
+    function normalize(text) {
+      return text.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const inputEl = document.querySelector(`input[name="${q}"]`);
+        const userAnswer = normalize(inputEl.value);
+        const correctAnswer = normalize(answers[q].correct);
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

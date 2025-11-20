@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prambanan Temple – Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+    <!-- Reading Section -->
+    <div class="reading-section">
+      <h2>Prambanan Temple</h2>
+      <div class="story">
+        <p>Prambanan Temple, located in Central Java, Indonesia, is a magnificent Hindu temple complex dating back to the 9th century. As one of Indonesia’s most important cultural sites, it attracts a large number of tourists every year. However, the increasing number of visitors has raised serious concerns about waste management and the preservation of the temple complex.</p>
+
+        <p>To address this issue, Prambanan’s management has implemented a comprehensive waste management system. The system includes waste separation, collection, and disposal. Waste is separated at the source, with different types of waste placed into different bins such as organic waste, paper and cardboard, plastics, glass, and metal.</p>
+
+        <p>The waste is then collected and transported to a central location where it is sorted and processed. Organic waste is composted, while recyclable materials such as paper, plastics, glass, and metal are sent to recycling facilities. Non-recyclable waste is disposed of in a sanitary landfill.</p>
+
+        <p>In addition to waste separation and disposal, the management also focuses on waste reduction and prevention through education and awareness campaigns targeted at visitors and staff. Visitors are encouraged to bring reusable bottles and containers to reduce single-use plastic waste, and staff are trained in proper waste management practices.</p>
+
+        <p>Overall, Prambanan’s waste management system is an important step toward sustainable tourism and preserving Indonesia’s cultural heritage. It sets a strong example for other cultural sites and tourist destinations in the region, demonstrating the importance of responsible waste management for long-term environmental and cultural sustainability.</p>
+      </div>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <div class="question">
+          <p>1. Prambanan Temple is located in _______ Java.</p>
+          <input type="text" name="q1" />
+        </div>
+
+        <div class="question">
+          <p>2. The waste management system includes separation, collection, and _______.</p>
+          <input type="text" name="q2" />
+        </div>
+
+        <div class="question">
+          <p>3. Organic waste is processed into _______.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <div class="question">
+          <p>4. Visitors are encouraged to bring reusable bottles and containers to reduce _______ plastics.</p>
+          <input type="text" name="q4" />
+        </div>
+
+        <div class="question">
+          <p>5. Recyclable materials such as paper, plastics, glass, and metal are sent to _______ facilities.</p>
+          <input type="text" name="q5" />
+        </div>
+
+        <div class="question">
+          <p>6. Waste reduction is supported through education and _______ campaigns.</p>
+          <input type="text" name="q6" />
+        </div>
+
+        <div class="question">
+          <p>7. Non-recyclable waste is disposed of in a _______ landfill.</p>
+          <input type="text" name="q7" />
+        </div>
+
+        <div class="question">
+          <p>8. Prambanan’s waste management system supports the goal of _______ tourism.</p>
+          <input type="text" name="q8" />
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-prambanan.html" class="btn-vocab">📚 Vocabulary</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "central", explanation: "Prambanan Temple is located in Central Java." },
+      q2: { correct: "disposal", explanation: "The system includes waste separation, collection, and disposal." },
+      q3: { correct: "compost", explanation: "Organic waste is processed into compost." },
+      q4: { correct: "single-use", explanation: "Reusable bottles help reduce single-use plastics." },
+      q5: { correct: "recycling", explanation: "Recyclable materials are sent to recycling facilities." },
+      q6: { correct: "awareness", explanation: "They conduct education and awareness campaigns." },
+      q7: { correct: "sanitary", explanation: "Non-recyclable waste is disposed of in a sanitary landfill." },
+      q8: { correct: "sustainable", explanation: "The system supports the goal of sustainable tourism." }
+    };
+
+    function normalize(text) {
+      return text.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const inputEl = document.querySelector(`input[name="${q}"]`);
+        const userAnswerRaw = inputEl ? inputEl.value : "";
+        const userAnswer = normalize(userAnswerRaw);
+        const correctAnswer = normalize(answers[q].correct);
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Football Experience</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6fa; }
+
+    .reading-box p {
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .reading-box, .quiz-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex: 1;
+    }
+
+    h2 { margin-bottom: 15px; color: #2563eb; }
+    p { line-height: 1.6; }
+
+    .question { margin-bottom: 20px; }
+    .question p { font-weight: bold; }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #aaa;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    .back-buttons { margin-top: 25px; display: flex; gap: 10px; }
+    .back-buttons a {
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-home { background:#2563eb; color:#fff; }
+    .back-home:hover { background:#1e40af; }
+    .back-vocab { background:#f3f4f6; border:1px solid #2563eb; color:#2563eb; }
+    .back-vocab:hover { background:#e0e7ff; }
+
+    #result { margin-top: 20px; background:#f0f9ff; padding:15px; border-radius:10px; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Reading Section -->
+    <div class="reading-box">
+      <h2>My Football Experience</h2>
+      <p>Hello, allow me to introduce myself. My name is Andre Detrio. You can call me Andre. I would like to tell you about my football experience. It was at my Junior High School time. As I knew, when I was at eight grades, I followed the football extracurricular. I had to practice how to be a good soccer player every Friday and Sunday. My coach was Mr. Alex. He was so kind and funny.</p>
+
+      <p>Every letter about soccer champion, he asked and guided the students to follow. Winning or failing champion was not the priorities according to him. The most important for us was that we could know the real competition with another team from another school.</p>
+
+      <p>Talking about my football experience, there was a football competition in my school. He announced to all and asked us to practice hard. He promised if we got the first winner, we would go to the beach.</p>
+
+      <p>The competition was scheduled in the beginning of August. We were so nervous and along the competition we faced many teams. At the end of the competition, the master of ceremony announced that our team was the first winner. We were so happy.</p>
+
+      <p>The coach celebrated our win and gave us the holiday to the beach next Sunday. That moment is my unforgettable football experience.</p>
+    </div>
+
+    <!-- Quiz Section -->
+    <div class="quiz-box">
+      <h2>Quiz</h2>
+
+      <form id="quizForm">
+
+        <!-- 1. MCQ -->
+        <div class="question">
+          <p>1. Why did Mr. Alex think winning was not the main priority?</p>
+          <select name="q1">
+            <option value="">-- Choose --</option>
+            <option value="a">Because he believed the beach trip was more important.</option>
+            <option value="b">Because he wanted students to enjoy competition and learn from it.</option>
+            <option value="c">Because he did not like football competitions.</option>
+          </select>
+        </div>
+
+        <!-- 2. MCQ HOTS -->
+        <div class="question">
+          <p>2. What can be inferred about Andre’s coach?</p>
+          <select name="q2">
+            <option value="">-- Choose --</option>
+            <option value="a">He only focused on strict punishments.</option>
+            <option value="b">He cared more about character building than trophies.</option>
+            <option value="c">He did not guide the players well.</option>
+          </select>
+        </div>
+
+        <!-- 3. Matching -->
+        <div class="question">
+          <p>3. Match the words with their meaning:</p>
+          <p>a. Nervous <br>b. Champion <br>c. Competition</p>
+
+          <select name="q3">
+            <option value="">-- Choose --</option>
+            <option value="a">a-Feeling worried, b-Winner, c-Contest</option>
+            <option value="b">a-Winner, b-Feeling worried, c-Contest</option>
+            <option value="c">a-Contest, b-Winner, c-Feeling worried</option>
+          </select>
+        </div>
+
+        <!-- 4. Matching -->
+        <div class="question">
+          <p>4. Match the idea to the correct sentence:</p>
+          <p>a. Reward <br>b. Training <br>c. Announcement</p>
+
+          <select name="q4">
+            <option value="">-- Choose --</option>
+            <option value="a">a-Beach trip, b-Practice for 2 weeks, c-Coach informed competition</option>
+            <option value="b">a-Practice for 2 weeks, b-Beach trip, c-Coach informed competition</option>
+            <option value="c">a-Coach informed competition, b-Beach trip, c-Practice for 2 weeks</option>
+          </select>
+        </div>
+
+        <!-- 5. Sentence Reorder -->
+        <div class="question">
+          <p>5. Arrange the sentence in the correct order:</p>
+          <p>(1) They practiced hard. (2) Andre joined the competition. (3) The coach motivated them.</p>
+
+          <select name="q5">
+            <option value="">-- Choose --</option>
+            <option value="a">3 - 1 - 2</option>
+            <option value="b">1 - 3 - 2</option>
+            <option value="c">2 - 1 - 3</option>
+          </select>
+        </div>
+
+        <!-- 6. Sentence Reorder -->
+        <div class="question">
+          <p>6. Arrange:</p>
+          <p>(1) The team won first place. (2) They were very happy. (3) The announcement was made.</p>
+
+          <select name="q6">
+            <option value="">-- Choose --</option>
+            <option value="a">3 - 1 - 2</option>
+            <option value="b">1 - 3 - 2</option>
+            <option value="c">2 - 3 - 1</option>
+          </select>
+        </div>
+
+        <!-- 7. MCQ -->
+        <div class="question">
+          <p>7. What was the prize the coach promised?</p>
+          <select name="q7">
+            <option value="">-- Choose --</option>
+            <option value="a">A football trophy</option>
+            <option value="b">A trip to the beach</option>
+            <option value="c">A day off from school</option>
+          </select>
+        </div>
+
+        <!-- 8. MCQ HOTS -->
+        <div class="question">
+          <p>8. What is the main idea of the story?</p>
+          <select name="q8">
+            <option value="">-- Choose --</option>
+            <option value="a">Andre never liked football.</option>
+            <option value="b">Andre’s unforgettable experience in a football competition.</option>
+            <option value="c">The coach closed the football club.</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="back-home">🏠 Home</a>
+        <a href="vocab-football.html" class="back-vocab">📘 Vocabulary</a>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+  const answerKey = {
+    q1: "b",
+    q2: "b",
+    q3: "a",
+    q4: "a",
+    q5: "a",
+    q6: "a",
+    q7: "b",
+    q8: "b"
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let total = 8;
+    let output = "<h3>Your Results:</h3>";
+
+    for (let q in answerKey) {
+      let user = document.querySelector(`[name=\"${q}\"]`).value;
+      if (user === answerKey[q]) {
+        score++;
+        output += `<p><b>${q.toUpperCase()}</b>: Correct ✔️</p>`;
+      } else {
+        output += `<p><b>${q.toUpperCase()}</b>: Wrong ❌</p>`;
+      }
+    }
+
+    output = `<h3>Your Score: ${score} / ${total}</h3>` + output;
+    document.getElementById("result").innerHTML = output;
+  }
+</script>
+
+</body>
+</html>

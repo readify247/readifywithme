@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Jobs - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fb;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      display: flex;
+      gap: 25px;
+    }
+
+    .reading-box, .quiz-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 50%;
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-box h2, .quiz-box h2 {
+      margin-top: 0;
+      color: #1e40af;
+    }
+
+    .reading-box p {
+      text-align: justify;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    .question p {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .options label {
+      display: block;
+      background: #f3f4f6;
+      padding: 8px 10px;
+      border-radius: 8px;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+
+    .options label:hover {
+      background: #e5e7eb;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 12px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .back-buttons {
+      margin-top: 25px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .back-buttons a {
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .back-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .back-vocab {
+      background: #f3f4f6;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+    }
+
+    .back-home:hover { background: #1e40af; }
+    .back-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-box, .quiz-box {
+        width: 100%;
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-top:20px;">Readify 24/7</h1>
+
+  <div class="container">
+    
+    <!-- READING SECTION -->
+    <div class="reading-box">
+      <h2>Online Jobs</h2>
+
+      <p>In today's digital age, the rise of the internet has brought about a new realm of employment known as online jobs. This innovative form of work has garnered the attention of individuals seeking flexible and convenient job opportunities.</p>
+
+      <p>Online jobs have the potential to provide individuals with a plethora of advantages that traditional forms of employment may not offer. One of the key benefits of online jobs is their unparalleled flexibility and convenience.</p>
+
+      <p>Unlike traditional office-based jobs, online work allows individuals to create their own schedules, enabling them to strike a balance between work and personal life. This level of autonomy empowers workers to manage their time effectively, leading to increased productivity and overall job satisfaction.</p>
+
+      <p>Furthermore, online jobs come with a cost-efficiency factor. Working from home eliminates the need for commuting, formal attire, and other associated costs. This cost-effectiveness not only benefits employees but also contributes to a greener environment by reducing carbon emissions from commuting.</p>
+
+      <p>Additionally, online jobs break down geographical barriers. Individuals can work for clients and companies from around the world, broadening their exposure to diverse cultures and perspectives. This global reach not only enhances professional growth but also fosters cross-cultural understanding and collaboration.</p>
+
+      <p>Moreover, online jobs provide a platform for individuals to unleash their entrepreneurial spirit. Freelancers and independent contractors have the opportunity to build their own brands and businesses, offering services and expertise to a global clientele.</p>
+
+      <p>In conclusion, the advantages of online jobs are undeniable. As technology continues to evolve, embracing the world of online jobs can open doors to new horizons, redefine work-life balance, and lead to a fulfilling and rewarding career.</p>
+
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-box">
+      <h2>Quiz</h2>
+
+      <form id="quizForm">
+
+        <!-- MC QUESTIONS -->
+        <div class="question">
+          <p>1. What is the main purpose of the passage?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="b"> To highlight the benefits of online jobs</label>
+            <label><input type="radio" name="q1" value="a"> To promote quitting traditional jobs</label>
+            <label><input type="radio" name="q1" value="c"> To compare salary differences</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. What does “plethora” most nearly mean?</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="b"> A large number</label>
+            <label><input type="radio" name="q2" value="a"> A small amount</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. What is one environmental benefit of online jobs?</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="a"> They reduce carbon emissions</label>
+            <label><input type="radio" name="q3" value="b"> They increase electricity use in offices</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. Which of the following is NOT mentioned as a benefit?</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="d"> Guaranteed high income</label>
+            <label><input type="radio" name="q4" value="c"> Global opportunities</label>
+          </div>
+        </div>
+
+        <!-- TRUE/FALSE -->
+        <div class="question">
+          <p>5. True or False: Online jobs allow people to create their own schedules.</p>
+          <div class="options">
+            <label><input type="radio" name="q5" value="true"> True</label>
+            <label><input type="radio" name="q5" value="false"> False</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>6. True or False: Online jobs make it harder to work with people from other countries.</p>
+          <div class="options">
+            <label><input type="radio" name="q6" value="false"> False</label>
+            <label><input type="radio" name="q6" value="true"> True</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>7. True or False: Working from home reduces commuting costs.</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="true"> True</label>
+            <label><input type="radio" name="q7" value="false"> False</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>8. True or False: Online jobs limit creativity and independence.</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="false"> False</label>
+            <label><input type="radio" name="q8" value="true"> True</label>
+          </div>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="back-home">🏠 Back to Home</a>
+        <a href="vocab-onlinejobs.html" class="back-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: "b",
+      q2: "b",
+      q3: "a",
+      q4: "d",
+      q5: "true",
+      q6: "false",
+      q7: "true",
+      q8: "false"
+    };
+
+    const explanations = {
+      q1: "The passage focuses on the advantages of online jobs.",
+      q2: "“Plethora” means a large number.",
+      q3: "Online jobs reduce carbon emissions from commuting.",
+      q4: "Guaranteed high income is not mentioned.",
+      q5: "The text states workers can create their own schedules.",
+      q6: "Online jobs increase global opportunities, not reduce.",
+      q7: "Working from home removes the need for commuting.",
+      q8: "Online jobs encourage creativity and independence."
+    };
+
+    function submitQuiz() {
+      let score = 0;
+      let output = "";
+
+      Object.keys(answers).forEach(q => {
+        const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
+        
+        if (!userAnswer) {
+          output += `<p><b>${q.toUpperCase()}</b> Not answered ❌ — ${explanations[q]}</p>`;
+        } 
+        else if (userAnswer.value === answers[q]) {
+          score++;
+          output += `<p><b>${q.toUpperCase()}</b> Correct! ✅ — ${explanations[q]}</p>`;
+        } 
+        else {
+          output += `<p><b>${q.toUpperCase()}</b> Wrong ❌ — ${explanations[q]}</p>`;
+        }
+      });
+
+      document.getElementById("result").innerHTML =
+        `<h3>You scored ${score} out of 8</h3>` + output;
+    }
+  </script>
+
+</body>
+</html>

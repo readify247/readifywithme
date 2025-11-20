@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fox and The Grapes – Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .options label {
+      display: block;
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .options input { margin-right: 8px; }
+    .options label:hover { background: #f0f9ff; }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- ✨ READING SECTION -->
+    <div class="reading-section">
+      <h2>The Fox and The Grapes</h2>
+      <div class="story">
+        <p>One warm afternoon, a hungry fox was walking slowly through the forest. The sun was shining, and the air was hot. The fox had been looking for food all morning, but he found nothing to eat. His stomach growled loudly, and he was becoming tired.</p>
+
+        <p>As he walked, the fox suddenly saw a vineyard near the forest path. On the vines, he noticed many bunches of grapes hanging. The grapes looked big, round, purple, and very juicy. At once, the fox felt excited. “Ah, finally, something delicious for me!” he said to himself. He imagined the sweet taste of the grapes in his mouth.</p>
+
+        <p>The fox stood under the vine and opened his mouth wide, but the grapes were too high. He jumped once, but he missed. He jumped again, trying harder, but still he could not reach them. The fox did not give up quickly. He walked back a few steps, ran forward, and leapt as high as he could. Again, the grapes were far above him.</p>
+
+        <p>He tried many times, again and again. The fox stretched his body, stood on his back legs, and even tried to climb a little, but it was useless. Sweat began to fall from his face, and his legs grew weaker. The grapes still hung high, shining in the sun.</p>
+
+        <p>Finally, the fox stopped. He sat under the vine, breathing heavily. He looked up at the grapes with tired eyes. After a moment, he shook his head and said, “Those grapes are probably sour. I don’t want them anymore.” Then, he slowly walked away, still hungry and disappointed.</p>
+
+        <p><strong>Moral:</strong> People often say bad things about what they cannot have.</p>
+
+        <p style="font-size:13px; color:#6b7280; margin-top:20px;">
+          Adapted from <em>Aesop's Fables</em>, “The Fox and The Grapes”.
+        </p>
+      </div>
+    </div>
+
+    <!-- ✨ QUIZ SECTION -->
+    <div class="quiz-container">
+    <h2>Quiz: The Fox and The Grapes</h2>
+    <form id="quizForm">
+
+      <!-- Q1 -->
+      <div class="question">
+        <p>1. Where was the fox walking?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> In a city</label>
+          <label><input type="radio" name="q1" value="b"> In a forest</label>
+          <label><input type="radio" name="q1" value="c"> In a desert</label>
+          <label><input type="radio" name="q1" value="d"> In a village</label>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question">
+        <p>2. How did the fox feel at the beginning of the story?</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> Happy</label>
+          <label><input type="radio" name="q2" value="b"> Sleepy</label>
+          <label><input type="radio" name="q2" value="c"> Hungry</label>
+          <label><input type="radio" name="q2" value="d"> Angry</label>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question">
+        <p>3. What did the fox see on the vine?</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="a"> Apples</label>
+          <label><input type="radio" name="q3" value="b"> Grapes</label>
+          <label><input type="radio" name="q3" value="c"> Oranges</label>
+          <label><input type="radio" name="q3" value="d"> Pears</label>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question">
+        <p>4. What color were the grapes?</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="a"> Yellow</label>
+          <label><input type="radio" name="q4" value="b"> Green</label>
+          <label><input type="radio" name="q4" value="c"> Purple</label>
+          <label><input type="radio" name="q4" value="d"> Red</label>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question">
+        <p>5. How did the fox try to get the grapes?</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="a"> By climbing the tree</label>
+          <label><input type="radio" name="q5" value="b"> By shaking the vine</label>
+          <label><input type="radio" name="q5" value="c"> By jumping again and again</label>
+          <label><input type="radio" name="q5" value="d"> By asking another animal</label>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question">
+        <p>6. Why couldn’t the fox eat the grapes?</p>
+        <div class="options">
+          <label><input type="radio" name="q6" value="a"> They were too high</label>
+          <label><input type="radio" name="q6" value="b"> They were too sour</label>
+          <label><input type="radio" name="q6" value="c"> They were too small</label>
+          <label><input type="radio" name="q6" value="d"> They were not real</label>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question">
+        <p>7. What did the fox say at the end?</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="a"> “I will try again tomorrow.”</label>
+          <label><input type="radio" name="q7" value="b"> “Those grapes are probably sour.”</label>
+          <label><input type="radio" name="q7" value="c"> “I will ask for help.”</label>
+          <label><input type="radio" name="q7" value="d"> “I don’t like grapes.”</label>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question">
+        <p>8. What is the moral of the story?</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="a"> Never eat grapes in the forest.</label>
+          <label><input type="radio" name="q8" value="b"> If you want something, you must fight for it.</label>
+          <label><input type="radio" name="q8" value="c"> People often say bad things about what they cannot have.</label>
+          <label><input type="radio" name="q8" value="d"> The fox is the smartest animal.</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <!-- Back buttons -->
+    <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-fox.html" class="btn-vocab">📚 Vocabulary</a>
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "b", explanation: "The fox was walking in a forest." },
+      q2: { correct: "c", explanation: "At the beginning, the fox felt hungry." },
+      q3: { correct: "b", explanation: "He saw grapes hanging on the vine." },
+      q4: { correct: "c", explanation: "The grapes were purple and juicy." },
+      q5: { correct: "c", explanation: "The fox tried to reach them by jumping again and again." },
+      q6: { correct: "a", explanation: "The grapes were too high for the fox to reach." },
+      q7: { correct: "b", explanation: "He said, 'Those grapes are probably sour.' " },
+      q8: { correct: "c", explanation: "The moral is that people often say bad things about what they cannot have." }
+    };
+
+    function submitQuiz() {
+      let score = 0;
+      let output = "";
+
+      for (let q in answers) {
+        const selected = document.querySelector('input[name="'+q+'"]:checked');
+        if (selected) {
+          if (selected.value === answers[q].correct) {
+            score++;
+            output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+          } else {
+            output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+          }
+        } else {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b></p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${Object.keys(answers).length}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</body>
+</html>

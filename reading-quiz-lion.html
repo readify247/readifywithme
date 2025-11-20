@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lion and The Mouse – Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+    <!-- ✨ BAGIAN READING -->
+    <div class="reading-section">
+      <h2>The Lion and The Mouse</h2>
+      <div class="story">
+        <p>On a warm summer afternoon, deep inside a thick green forest, a mighty lion lay resting under the shade of a tall tree. He had just eaten a large meal and was enjoying a peaceful nap. The forest was quiet, broken only by the sound of rustling leaves and distant birdsong.</p>
+
+        <p>Suddenly, a tiny mouse appeared from a hole near the tree roots. The mouse scurried across the forest floor searching for food, and by accident, ran over the lion’s huge paw. The lion awoke with a thunderous roar that echoed through the trees. In an instant, he trapped the small creature beneath his sharp claws.</p>
+
+        <p>“Who dares to disturb my sleep?” the lion growled. Trembling with fear, the mouse squeaked, “Please, mighty lion, spare my life. I did not mean to wake you. If you let me go, I promise that one day I will repay your kindness.”</p>
+
+        <p>The lion laughed at such a bold promise. “How could a small creature like you ever help a powerful king like me?” he said with amusement. But something in the mouse’s courage touched his heart. Choosing mercy, the lion lifted his paw and set the mouse free. “Go,” he said. “But remember your promise.”</p>
+
+        <p>Weeks later, while patrolling his territory, the lion stepped into a hunter’s trap — a strong net hidden beneath leaves. The ropes tightened around his legs and chest. He roared and struggled with all his strength, but the more he fought, the tighter the net became. For the first time, the mighty lion felt helpless.</p>
+
+        <p>From a distance, the mouse heard the desperate roars and recognized the lion’s voice. Without hesitation, she hurried toward the sound. There she found the lion, proud and mighty but caught and powerless. “Do not worry, my friend,” said the mouse. “I will help you, just as I promised.”</p>
+
+        <p>Using her sharp teeth, she began gnawing at the ropes. It was slow, hard work, but the mouse did not give up. Bit by bit, the ropes weakened until they finally snapped. At last, the lion was free again. He stretched his body and looked down at the little mouse with deep gratitude.</p>
+
+        <p>“Thank you,” said the lion humbly. “Today you have saved my life. I was wrong to think that your size made you powerless. Even the smallest creature can do something mighty.”</p>
+
+        <p>From that day forward, the lion and the mouse became unlikely friends. They often walked through the forest together, teaching others that kindness, humility, and keeping promises are the true measures of strength.</p>
+
+        <p><strong>Moral:</strong> No act of kindness is ever wasted. Even the smallest friend can make a big difference.</p>
+
+        <p style="font-size:13px; color:#6b7280; margin-top:20px;">
+          Adapted from <em>Aesop's Fables</em>, “The Lion and the Mouse”.
+        </p>
+      </div>
+    </div>
+
+    <!-- ✨ BAGIAN QUIZ -->
+    <div class="quiz-container">
+    <h2>Quiz: The Lion and The Mouse</h2>
+    <form id="quizForm">
+
+      <div class="question">
+        <p>1. The lion was sleeping under the _______ of a tall tree.</p>
+        <input type="text" name="q1" />
+      </div>
+
+      <div class="question">
+        <p>2. The mouse accidentally ran across the lion’s _______.</p>
+        <input type="text" name="q2" />
+      </div>
+
+      <div class="question">
+        <p>3. The lion decided to _______ the mouse and let it go free.</p>
+        <input type="text" name="q3" />
+      </div>
+
+      <div class="question">
+        <p>4. A few weeks later, the lion was caught in a hunter’s _______.</p>
+        <input type="text" name="q4" />
+      </div>
+
+      <div class="question">
+        <p>5. The lion tried to free himself but felt completely _______.</p>
+        <input type="text" name="q5" />
+      </div>
+
+      <div class="question">
+        <p>6. The mouse helped by _______ the ropes with her sharp teeth.</p>
+        <input type="text" name="q6" />
+      </div>
+
+      <div class="question">
+        <p>7. The lion felt deep _______ after being rescued by the mouse.</p>
+        <input type="text" name="q7" />
+      </div>
+
+      <div class="question">
+        <p>8. The mouse reminded the lion of the importance of keeping a _______.</p>
+        <input type="text" name="q8" />
+      </div>
+
+      <div class="question">
+        <p>9. The lion learned that even the smallest _______ can do great things.</p>
+        <input type="text" name="q9" />
+      </div>
+
+      <div class="question">
+        <p>10. The story teaches us that no act of _______ is ever wasted.</p>
+        <input type="text" name="q10" />
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+     <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-lion.html" class="btn-vocab">📚 Vocabulary</a>
+    </div>
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "shade", explanation: "The lion was sleeping under the shade of a tall tree." },
+      q2: { correct: "paw", explanation: "The mouse accidentally ran across the lion’s paw." },
+      q3: { correct: "spare", explanation: "The lion decided to spare the mouse and let it go free." },
+      q4: { correct: "net", explanation: "A few weeks later, the lion was caught in a hunter’s net." },
+      q5: { correct: "helpless", explanation: "The lion tried to free himself but felt completely helpless." },
+      q6: { correct: "gnawing", explanation: "The mouse helped by gnawing the ropes with her sharp teeth." },
+      q7: { correct: "gratitude", explanation: "The lion felt deep gratitude after being rescued by the mouse." },
+      q8: { correct: "promise", explanation: "The mouse reminded the lion of the importance of keeping a promise." },
+      q9: { correct: "creature", explanation: "The lion learned that even the smallest creature can do great things." },
+      q10: { correct: "kindness", explanation: "The story teaches us that no act of kindness is ever wasted." }
+    };
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const userAnswer = document.querySelector(`input[name="${q}"]`).value.trim().toLowerCase();
+        const correctAnswer = answers[q].correct.toLowerCase();
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
+</body>
+</html>

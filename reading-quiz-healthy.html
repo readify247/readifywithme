@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Importance of Healthy Foods – Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-section">
+      <h2>The Importance of Healthy Foods for a Better Quality of Life</h2>
+      <div class="story">
+
+        <p>Eating healthy foods has become increasingly important in today's society, as people are becoming more aware of the benefits of a nutritious diet. There is ample evidence to suggest that consuming healthy foods is critical to maintaining good health and preventing chronic diseases. Firstly, healthy foods are packed with essential nutrients, such as vitamins, minerals, and fiber, which are necessary for the proper functioning of the body. For example, fruits and vegetables are rich in vitamins A, C, and E, which help support the immune system and protect the body against disease. Additionally, whole grains provide fiber, which helps regulate digestion and maintain healthy cholesterol levels.</p>
+
+        <p>Secondly, healthy foods can help prevent chronic diseases such as heart disease, type 2 diabetes, and certain cancers. These diseases are often caused by a poor diet that is high in saturated and trans fats, added sugars, and sodium. By consuming healthy foods that are low in these substances, individuals can reduce their risk of developing chronic diseases and improve their overall health.</p>
+
+        <p>Thirdly, healthy foods are typically low in calories, which can help with weight management. Maintaining a healthy weight is important for reducing the risk of chronic diseases and promoting overall well-being. Healthy foods are also filling and satisfying, which can prevent overeating and snacking on unhealthy foods.</p>
+
+        <p>In contrast, consuming unhealthy foods such as fast food, processed snacks, and sugary drinks can lead to negative health consequences. These foods are often high in calories, unhealthy fats, and added sugars, which can contribute to weight gain and chronic diseases.</p>
+
+        <p>In conclusion, it is clear that healthy foods are essential for maintaining good health and preventing chronic diseases. A diet rich in fruits, vegetables, whole grains, and lean proteins can provide the necessary nutrients for the body to function properly, reduce disease risk, and support healthy weight management. By making healthy food choices, individuals can improve their quality of life and achieve better health outcomes.</p>
+
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <div class="question">
+          <p>1. Healthy foods are packed with essential _______ such as vitamins and minerals.</p>
+          <input type="text" name="q1" />
+        </div>
+
+        <div class="question">
+          <p>2. Fruits and vegetables contain vitamins A, C, and E that support the _______ system.</p>
+          <input type="text" name="q2" />
+        </div>
+
+        <div class="question">
+          <p>3. Whole grains provide _______ which helps regulate digestion.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <div class="question">
+          <p>4. Healthy foods help prevent chronic diseases such as heart disease and type 2 _______.</p>
+          <input type="text" name="q4" />
+        </div>
+
+        <div class="question">
+          <p>5. Healthy foods are typically low in _______ which can help with weight management.</p>
+          <input type="text" name="q5" />
+        </div>
+
+        <div class="question">
+          <p>6. Unhealthy foods like fast food and sugary drinks can contribute to _______ gain.</p>
+          <input type="text" name="q6" />
+        </div>
+
+        <div class="question">
+          <p>7. A diet rich in whole grains, fruits, and vegetables helps reduce the risk of chronic _______.</p>
+          <input type="text" name="q7" />
+        </div>
+
+        <div class="question">
+          <p>8. Healthy foods support better health outcomes and a higher quality of _______.</p>
+          <input type="text" name="q8" />
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-healthy.html" class="btn-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "nutrients", explanation: "Healthy foods contain essential nutrients like vitamins and minerals." },
+      q2: { correct: "immune", explanation: "Vitamins A, C, and E support the immune system." },
+      q3: { correct: "fiber", explanation: "Whole grains are rich in fiber that helps regulate digestion." },
+      q4: { correct: "diabetes", explanation: "Healthy foods help prevent chronic diseases like type 2 diabetes." },
+      q5: { correct: "calories", explanation: "Healthy foods are often low in calories, which helps in weight management." },
+      q6: { correct: "weight", explanation: "Unhealthy foods can contribute to weight gain." },
+      q7: { correct: "diseases", explanation: "A healthy diet helps reduce the risk of chronic diseases." },
+      q8: { correct: "life", explanation: "Healthy foods support a better quality of life." }
+    };
+
+    function normalize(text) {
+      return text.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const inputEl = document.querySelector(`input[name="${q}"]`);
+        const userAnswer = normalize(inputEl.value);
+        const correctAnswer = normalize(answers[q].correct);
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

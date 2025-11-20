@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Exhibitions - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f8fb; }
+    .container { max-width: 1200px; margin: 30px auto; display: flex; gap: 25px; }
+    .reading-box, .quiz-box {
+      background: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 50%; overflow-y: auto; max-height: 85vh;
+    }
+    .reading-box h2, .quiz-box h2 { margin-top: 0; color: #1e40af; }
+    .reading-box p { text-align: justify; line-height: 1.7; margin-bottom: 14px; }
+    .question { margin-bottom: 22px; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .options label {
+      display: block; background: #f3f4f6; padding: 8px 10px;
+      border-radius: 8px; margin-bottom: 6px; cursor: pointer;
+    }
+    .options label:hover { background: #e5e7eb; }
+    select { padding: 8px; width: 100%; border-radius: 6px; border:1px solid #ccc; }
+    button {
+      background: #2563eb; color: #fff; padding: 12px 18px;
+      border: none; border-radius: 8px; cursor: pointer;
+      margin-top: 12px; font-size: 16px;
+    }
+    button:hover { background: #1e40af; }
+    #result { margin-top: 20px; font-size: 16px; line-height: 1.6; }
+    .back-buttons { margin-top: 25px; display: flex; gap: 10px; }
+    .back-buttons a {
+      text-decoration: none; padding: 10px 16px;
+      border-radius: 8px; font-weight: 600;
+    }
+    .back-home { background: #2563eb; color: white; }
+    .back-vocab {
+      background: #f3f4f6; border: 1px solid #2563eb; color: #2563eb;
+    }
+    .back-home:hover { background: #1e40af; }
+    .back-vocab:hover { background: #e0e7ff; }
+    @media(max-width:900px){ .container{flex-direction:column;} .reading-box,.quiz-box{width:100%;max-height:none;} }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-top:20px;">Readify 24/7</h1>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-box">
+      <h2>Art Exhibitions</h2>
+
+      <p>Art exhibitions are special events where artists display their works to the public. These exhibitions can take place in galleries, museums, or even outdoor spaces. They are important because they offer many benefits to artists and the public. An art exhibition is not just a display of artworks; it is also an opportunity to learn about different cultures, ideas, and perspectives.</p>
+
+      <p>Art exhibitions are essential for showcasing the talent of artists. They provide a platform where both new and established artists can present their work. This exposure can lead to recognition and career opportunities for the artists. It also allows them to receive feedback from the audience, which can be valuable for their artistic development.</p>
+
+      <p>Art exhibitions promote cultural exchange by displaying artworks from different parts of the world. Visitors can learn about other cultures and traditions through the art on display. This helps in fostering understanding and appreciation for diversity. For example, an exhibition featuring traditional African art can teach people about the history and customs of African societies.</p>
+
+      <p>Art exhibitions are educational. They offer insights into various art movements, techniques, and historical contexts. Schools and educational institutions often organize visits to art exhibitions to enhance students' learning experiences. Moreover, exhibitions can inspire visitors to explore their own creativity.</p>
+
+      <p>Art exhibitions play a crucial role in society. They provide a platform for artists, promote cultural exchange, and offer educational opportunities. Whether you are an artist, a student, or someone who appreciates art, visiting an art exhibition can be a rewarding experience.</p>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-box">
+      <h2>Quiz</h2>
+
+      <form id="quizForm">
+
+        <!-- MC HOTS -->
+        <div class="question">
+          <p>1. What is the main purpose of an art exhibition?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> To simply display artwork without interaction</label>
+            <label><input type="radio" name="q1" value="b"> To showcase artists’ work and promote learning</label>
+            <label><input type="radio" name="q1" value="c"> To replace museums entirely</label>
+          </div>
+        </div>
+
+        <!-- Vocabulary in context -->
+        <div class="question">
+          <p>2. The word “platform” in the text most closely means:</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> A physical stage</label>
+            <label><input type="radio" name="q2" value="b"> An opportunity or space to present</label>
+            <label><input type="radio" name="q2" value="c"> A type of transportation</label>
+          </div>
+        </div>
+
+        <!-- True/False with reason -->
+        <div class="question">
+          <p>3. True or False: Art exhibitions only benefit professional artists.</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="true"> True</label>
+            <label><input type="radio" name="q3" value="false"> False</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>4. True or False: Art exhibitions help visitors understand different cultures.</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="true"> True</label>
+            <label><input type="radio" name="q4" value="false"> False</label>
+          </div>
+        </div>
+
+        <!-- Matching -->
+        <div class="question">
+          <p>5. Match the concepts:</p>
+          <p>1 = Cultural exchange<br>2 = Artistic development<br>3 = Educational value</p>
+
+          <p>A. Feedback for artists
+            <select name="q5a"><option value="">--</option><option value="2">2</option><option value="1">1</option><option value="3">3</option></select></p>
+
+          <p>B. Learning about techniques and history
+            <select name="q5b"><option value="">--</option><option value="3">3</option><option value="1">1</option><option value="2">2</option></select></p>
+
+          <p>C. Art from around the world
+            <select name="q5c"><option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></p>
+        </div>
+
+        <!-- Sentence reorder -->
+        <div class="question">
+          <p>6. Arrange the ideas in the order they appear in the text:</p>
+          <p>A = Exhibitions help artists gain recognition<br>B = Exhibitions teach about cultures<br>C = Exhibitions inspire creativity</p>
+
+          <p>A: <select name="q6a"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+          <p>B: <select name="q6b"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+          <p>C: <select name="q6c"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+        </div>
+
+        <!-- HOTS inference -->
+        <div class="question">
+          <p>7. What can be inferred about students who visit exhibitions?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> They gain educational benefits</label>
+            <label><input type="radio" name="q7" value="b"> They become professional artists immediately</label>
+            <label><input type="radio" name="q7" value="c"> They no longer need art classes</label>
+          </div>
+        </div>
+
+        <!-- MC tricky -->
+        <div class="question">
+          <p>8. Which statement BEST summarizes the final paragraph?</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> Exhibitions are only for artists and professionals</label>
+            <label><input type="radio" name="q8" value="b"> Exhibitions are important for society because they educate and connect people</label>
+            <label><input type="radio" name="q8" value="c"> Exhibitions should replace schools entirely</label>
+          </div>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="back-home">🏠 Back to Home</a>
+        <a href="vocab-art.html" class="back-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+function submitQuiz(){
+  let score=0;
+  let out="";
+
+  const ans={
+    q1:"b", q2:"b",
+    q3:"false", q4:"true",
+    q5:{a:"2",b:"3",c:"1"},
+    q6:{a:"1",b:"2",c:"3"},
+    q7:"a", q8:"b"
+  };
+
+  const exp={
+    q1:"Exhibitions showcase art and promote learning.",
+    q2:"Platform means an opportunity or space to present.",
+    q3:"Exhibitions benefit many people, not just professionals.",
+    q4:"They help people understand cultures.",
+    q5:"A=2 development, B=3 education, C=1 culture.",
+    q6:"Order: artists→culture→creativity.",
+    q7:"Students gain educational benefits.",
+    q8:"They educate and connect society."
+  };
+
+  // MC + TF
+  ["q1","q2","q3","q4","q7","q8"].forEach(q=>{
+    const user=document.querySelector(`input[name="${q}"]:checked`);
+    if(!user){ out+=`<p>${q.toUpperCase()} Not answered ❌ — ${exp[q]}</p>`;
+    } else if(user.value===ans[q]) { score++; out+=`<p>${q.toUpperCase()} Correct! ✅ — ${exp[q]}</p>`;
+    } else { out+=`<p>${q.toUpperCase()} Wrong ❌ — ${exp[q]}</p>`; }
+  });
+
+  // Matching
+  const q5a=document.querySelector('select[name="q5a"]').value;
+  const q5b=document.querySelector('select[name="q5b"]').value;
+  const q5c=document.querySelector('select[name="q5c"]').value;
+  if(q5a===ans.q5.a && q5b===ans.q5.b && q5c===ans.q5.c){ score++; out+=`<p>Q5 Correct! ✅ — ${exp.q5}</p>`;
+  } else { out+=`<p>Q5 Incorrect ❌ — ${exp.q5}</p>`; }
+
+  // Reorder
+  const q6a=document.querySelector('select[name="q6a"]').value;
+  const q6b=document.querySelector('select[name="q6b"]').value;
+  const q6c=document.querySelector('select[name="q6c"]').value;
+  if(q6a===ans.q6.a && q6b===ans.q6.b && q6c===ans.q6.c){ score++; out+=`<p>Q6 Correct! ✅ — ${exp.q6}</p>`;
+  } else { out+=`<p>Q6 Incorrect ❌ — ${exp.q6}</p>`; }
+
+  document.getElementById("result").innerHTML = `<h3>You scored ${score} out of 8</h3>` + out;
+}
+</script>
+
+</body>
+</html>

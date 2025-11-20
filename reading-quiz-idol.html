@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meeting My Idol - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background:#f7f8fb; 
+      margin:0;
+    }
+
+    header {
+      text-align:center;
+      padding:16px 0;
+      background:white;
+      box-shadow:0 1px 0 rgba(0,0,0,0.05);
+    }
+
+    header h1 {
+      margin:0;
+      color:#173b8a;
+      font-size:26px;
+    }
+
+    .container {
+      display:flex;
+      gap:30px;
+      max-width:1150px;
+      margin:35px auto;
+      padding:0 15px;
+    }
+
+    .reading-section, .quiz-section {
+      background:white;
+      border-radius:12px;
+      padding:20px 24px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.08);
+      max-height:80vh;
+      overflow:auto;
+    }
+
+    .reading-section { flex:1.2; }
+    .quiz-section { flex:0.9; }
+
+    h2 { margin-top:0; color:#1e3a8a; }
+
+    .story p {
+      text-align:justify;
+      line-height:1.7;
+      margin-bottom:18px;
+      color:#222;
+    }
+
+    .question { margin-bottom:18px; }
+    .question p { font-weight:bold; margin-bottom:8px; }
+
+    select, input[type="text"] {
+      width:100%;
+      padding:10px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      font-size:15px;
+      box-sizing:border-box;
+      margin-top:4px;
+    }
+
+    button {
+      background:#2563eb;
+      color:white;
+      padding:12px 18px;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      margin-top:10px;
+      font-weight:bold;
+    }
+    button:hover { background:#1e40af; }
+
+    #result { margin-top:18px; line-height:1.6; }
+
+    .back-buttons {
+      margin-top:22px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .back-buttons a {
+      padding:10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .back-home {
+      background:#2563eb;
+      color:white;
+    }
+    .back-home:hover { background:#1e40af; }
+
+    .back-vocab {
+      background:#f3f4f6;
+      border:1px solid #2563eb;
+      color:#2563eb;
+    }
+    .back-vocab:hover { background:#e0e7ff; }
+
+    @media(max-width:900px){
+      .container { flex-direction:column; }
+      .reading-section, .quiz-section { max-height:none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Readify 24/7</h1>
+</header>
+
+<div class="container">
+
+  <!-- READING -->
+  <div class="reading-section">
+    <h2>Meeting My Idol</h2>
+
+    <div class="story">
+      <p>Last month, I had one of the most exciting experiences in my life. I finally got the chance to meet my favorite idol, Lina, who is a very famous singer. The event happened during a big music concert held in my city. I had been waiting for this concert for weeks, and when the day finally came, I was full of excitement and nervousness.</p>
+
+      <p>Lina performed beautifully on stage, singing all her popular songs. The audience was cheering loudly, and the atmosphere was full of energy. After the concert, there was a special chance for fans to meet her backstage. I joined a long line with many other fans who were also eager to meet Lina.</p>
+
+      <p>When it was finally my turn, my heart was beating fast. Lina greeted me with a warm smile and shook my hand. I told her how much I admired her music and how her songs had motivated me during difficult times. Lina thanked me sincerely and took a photo with me. I could hardly believe that I was standing so close to my idol!</p>
+
+      <p>Meeting Lina was an unforgettable experience. It made me feel very happy and inspired to work harder on my own dreams. I will always remember that special day and hope to see her again in the future.</p>
+    </div>
+
+    <p style="font-size:13px;color:#666;margin-top:10px;"></p>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="quiz-section">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <!-- MULTIPLE CHOICE -->
+      <div class="question">
+        <p>1. Why was the narrator excited before the concert?</p>
+        <select name="q1">
+          <option value="">-- choose --</option>
+          <option value="b">Because they would meet their favorite idol</option>
+          <option value="a">Because it was their first time on stage</option>
+          <option value="c">Because they won free tickets</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>2. What happened after the concert?</p>
+        <select name="q2">
+          <option value="">-- choose --</option>
+          <option value="b">There was a meet-and-greet session</option>
+          <option value="a">Lina went home immediately</option>
+          <option value="c">The narrator left early</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>3. How did Lina treat the narrator?</p>
+        <select name="q3">
+          <option value="">-- choose --</option>
+          <option value="b">She greeted warmly and took a photo</option>
+          <option value="a">She ignored them</option>
+          <option value="c">She refused to talk due to tiredness</option>
+        </select>
+      </div>
+
+
+      <!-- TRUE/FALSE -->
+      <div class="question">
+        <p>4. The narrator had waited for the concert for weeks. (True/False + reason)</p>
+        <input type="text" name="q4">
+      </div>
+
+      <div class="question">
+        <p>5. The narrator felt disappointed after meeting Lina. (True/False + reason)</p>
+        <input type="text" name="q5">
+      </div>
+
+      <div class="question">
+        <p>6. The audience was quiet during the performance. (True/False + reason)</p>
+        <input type="text" name="q6">
+      </div>
+
+
+      <!-- VOCABULARY IN CONTEXT -->
+      <div class="question">
+        <p>7. “Admired” in the text means…</p>
+        <select name="q7">
+          <option value="">-- choose --</option>
+          <option value="a">Liked and respected</option>
+          <option value="b">Forgot easily</option>
+          <option value="c">Disliked strongly</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>8. “Unforgettable” is closest in meaning to…</p>
+        <select name="q8">
+          <option value="">-- choose --</option>
+          <option value="b">Impossible to forget</option>
+          <option value="a">Unimportant</option>
+          <option value="c">Hard to understand</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="vocab-idol.html" class="back-vocab">📘 Vocabulary</a>
+      <a href="index.html" class="back-home">🏠 Back to Home</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "b",
+    q4: "true",
+    q5: "false",
+    q6: "false",
+    q7: "a",
+    q8: "b"
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let total = 8;
+    let output = "";
+
+    for (let q in answers) {
+      let user = document.querySelector(`[name="${q}"]`).value.trim().toLowerCase();
+      let correct = answers[q];
+
+      if (user === correct) {
+        score++;
+        output += `<p><b>${q.toUpperCase()}</b> ✅ Correct</p>`;
+      } else if (user === "") {
+        output += `<p><b>${q.toUpperCase()}</b> ❌ No answer</p>`;
+      } else {
+        output += `<p><b>${q.toUpperCase()}</b> ❌ Wrong</p>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      `<h3>Your Score: ${score}/${total}</h3>` + output;
+  }
+</script>
+
+</body>
+</html>

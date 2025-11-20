@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Secret in the Library - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f8fb; }
+    .container { max-width: 1200px; margin: 30px auto; display: flex; gap: 25px; }
+    .reading-box, .quiz-box {
+      background: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 50%; overflow-y: auto; max-height: 85vh;
+    }
+    .reading-box h2, .quiz-box h2 { margin-top: 0; color: #1e40af; }
+    .reading-box p { text-align: justify; line-height: 1.7; margin-bottom: 14px; }
+    .question { margin-bottom: 22px; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .options label {
+      display: block; background: #f3f4f6; padding: 8px 10px;
+      border-radius: 8px; margin-bottom: 6px; cursor: pointer;
+    }
+    .options label:hover { background: #e5e7eb; }
+    select { padding: 8px; width: 100%; border-radius: 6px; border:1px solid #ccc; }
+    button {
+      background: #2563eb; color: #fff; padding: 12px 18px;
+      border: none; border-radius: 8px; cursor: pointer;
+      margin-top: 12px; font-size: 16px;
+    }
+    button:hover { background: #1e40af; }
+    #result { margin-top: 20px; font-size: 16px; line-height: 1.6; }
+    .back-buttons { margin-top: 25px; display: flex; gap: 10px; }
+    .back-buttons a {
+      text-decoration: none; padding: 10px 16px; border-radius: 8px;
+      font-weight: 600;
+    }
+    .back-home { background: #2563eb; color: white; }
+    .back-vocab {
+      background: #f3f4f6; border: 1px solid #2563eb; color: #2563eb;
+    }
+    .back-home:hover { background: #1e40af; }
+    .back-vocab:hover { background: #e0e7ff; }
+    @media(max-width:900px){ .container{flex-direction:column;} .reading-box,.quiz-box{width:100%;max-height:none;} }
+  </style>
+</head>
+
+<body>
+
+  <h1 style="text-align:center; margin-top:20px;">Readify 24/7</h1>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-box">
+      <h2>The Secret in the Library</h2>
+
+      <p>Rafi loved spending time in the school library. One afternoon, he saw a strange book with no title. When he opened it, a paper fell out. It was a map of the school with an “X” mark in the basement.</p>
+
+      <p>Rafi became curious. He followed the map after school. In the basement, behind a shelf, he found an old wooden box. Inside were old things and a letter from the first principal of the school! The letter explained that many years ago, students hid letters, books, and photos about school history in this box.</p>
+
+      <p>It was a secret project during a difficult time when the school almost closed. They wanted to keep their memories safe.</p>
+
+      <p>Rafi showed the box to the current principal. Everyone was surprised and happy. The box became part of a small school museum.</p>
+
+      <p>Thanks to Rafi’s curiosity, the school found a forgotten story that brought students and teachers closer together.</p>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-box">
+      <h2>Quiz</h2>
+
+      <form id="quizForm">
+
+        <!-- Q1 Multiple Choice -->
+        <div class="question">
+          <p>1. What started Rafi's discovery?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="a"> He was asked by the principal.</label>
+            <label><input type="radio" name="q1" value="b"> He found a strange book with a map inside.</label>
+            <label><input type="radio" name="q1" value="c"> He heard a noise in the basement.</label>
+          </div>
+        </div>
+
+        <!-- Q2 Vocabulary in context -->
+        <div class="question">
+          <p>2. The word “curious” in the text most nearly means…</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="a"> Worried</label>
+            <label><input type="radio" name="q2" value="b"> Interested and wanting to know more</label>
+            <label><input type="radio" name="q2" value="c"> Tired</label>
+          </div>
+        </div>
+
+        <!-- Q3 True/False -->
+        <div class="question">
+          <p>3. True or False: The wooden box only contained photos.</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="true"> True</label>
+            <label><input type="radio" name="q3" value="false"> False</label>
+          </div>
+        </div>
+
+        <!-- Q4 True/False HOTS -->
+        <div class="question">
+          <p>4. True or False: The secret project was created during a very successful time for the school.</p>
+          <div class="options">
+            <label><input type="radio" name="q4" value="true"> True</label>
+            <label><input type="radio" name="q4" value="false"> False</label>
+          </div>
+        </div>
+
+        <!-- Q5 Matching -->
+        <div class="question">
+          <p>5. Match the items with their meanings:</p>
+
+          <p>1 = Wooden box<br>2 = Map<br>3 = Letter</p>
+
+          <p>A. Shows directions  
+            <select name="q5a">
+              <option value="">--</option><option value="2">2</option><option value="1">1</option><option value="3">3</option>
+            </select>
+          </p>
+
+          <p>B. Contains objects from the past  
+            <select name="q5b">
+              <option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+            </select>
+          </p>
+
+          <p>C. Tells a message from someone  
+            <select name="q5c">
+              <option value="">--</option><option value="3">3</option><option value="1">1</option><option value="2">2</option>
+            </select>
+          </p>
+        </div>
+
+        <!-- Q6 Sentence Order -->
+        <div class="question">
+          <p>6. Put these events in order:</p>
+          <p>A = Rafi followed the map<br>B = Rafi found an old box<br>C = Rafi showed it to the principal</p>
+
+          <p>A: <select name="q6a"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+          <p>B: <select name="q6b"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+          <p>C: <select name="q6c"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+        </div>
+
+        <!-- Q7 Inference -->
+        <div class="question">
+          <p>7. What can be inferred about the first principal?</p>
+          <div class="options">
+            <label><input type="radio" name="q7" value="a"> They didn’t care about the school.</label>
+            <label><input type="radio" name="q7" value="b"> They wanted to preserve the school’s history.</label>
+            <label><input type="radio" name="q7" value="c"> They hid the box for fun.</label>
+          </div>
+        </div>
+
+        <!-- Q8 Summarizing -->
+        <div class="question">
+          <p>8. Which statement best summarizes the story?</p>
+          <div class="options">
+            <label><input type="radio" name="q8" value="a"> Rafi found a lost box and helped the school discover part of its history.</label>
+            <label><input type="radio" name="q8" value="b"> Rafi was punished for entering the basement.</label>
+            <label><input type="radio" name="q8" value="c"> The library needed new books.</label>
+          </div>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="back-home">🏠 Back to Home</a>
+        <a href="vocab-library.html" class="back-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+function submitQuiz(){
+  let score=0;
+  let out="";
+
+  const ans={
+    q1:"b",
+    q2:"b",
+    q3:"false",
+    q4:"false",
+    q5:{a:"2",b:"1",c:"3"},
+    q6:{a:"1",b:"2",c:"3"},
+    q7:"b",
+    q8:"a"
+  };
+
+  const exp={
+    q1:"He found a strange book containing a map.",
+    q2:"Curious means wanting to know more.",
+    q3:"The box contained many items, not only photos.",
+    q4:"The school was struggling, not successful.",
+    q5:"A=2 (map), B=1 (box), C=3 (letter).",
+    q6:"Order: Follow map → Find box → Show principal.",
+    q7:"The principal wanted to preserve history.",
+    q8:"The story is about Rafi helping the school rediscover history."
+  };
+
+  ["q1","q2","q3","q4","q7","q8"].forEach(q=>{
+    const user=document.querySelector(`input[name="${q}"]:checked`);
+    if(!user){
+      out+=`<p>${q.toUpperCase()} Not answered ❌ — ${exp[q]}</p>`;
+    } else if(user.value===ans[q]){
+      score++; out+=`<p>${q.toUpperCase()} Correct! ✅ — ${exp[q]}</p>`;
+    } else {
+      out+=`<p>${q.toUpperCase()} Wrong ❌ — ${exp[q]}</p>`;
+    }
+  });
+
+  const q5a=document.querySelector('select[name="q5a"]').value;
+  const q5b=document.querySelector('select[name="q5b"]').value;
+  const q5c=document.querySelector('select[name="q5c"]').value;
+  if(q5a===ans.q5.a && q5b===ans.q5.b && q5c===ans.q5.c){
+    score++; out+=`<p>Q5 Correct! ✅ — ${exp.q5}</p>`;
+  } else {
+    out+=`<p>Q5 Incorrect ❌ — ${exp.q5}</p>`;
+  }
+
+  const q6a=document.querySelector('select[name="q6a"]').value;
+  const q6b=document.querySelector('select[name="q6b"]').value;
+  const q6c=document.querySelector('select[name="q6c"]').value;
+  if(q6a===ans.q6.a && q6b===ans.q6.b && q6c===ans.q6.c){
+    score++; out+=`<p>Q6 Correct! ✅ — ${exp.q6}</p>`;
+  } else {
+    out+=`<p>Q6 Incorrect ❌ — ${exp.q6}</p>`;
+  }
+
+  document.getElementById("result").innerHTML =
+    `<h3>You scored ${score} out of 8</h3>` + out;
+}
+</script>
+
+</body>
+</html>

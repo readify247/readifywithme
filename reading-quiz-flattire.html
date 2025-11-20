@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Day with a Flat Tire - Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .reading-box,
+    .quiz-box {
+      flex: 1;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      font-size: 15px;
+      border: 1px solid #cbd5e1;
+    }
+
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    #result {
+      margin-top: 18px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .back-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .back-buttons a {
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .back-home {
+      background: #2563eb;
+      color: white;
+    }
+
+    .back-home:hover {
+      background: #1e40af;
+    }
+
+    .back-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .back-vocab:hover {
+      background: #e0e7ff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Reading Section -->
+  <div class="reading-box">
+    <h2>A Day with a Flat Tire</h2>
+
+    <p>One sunny afternoon, a boy named Arif decided to ride his bike to the park. He had been looking forward to this all week. As he rode down the street, he felt the wind in his hair and the warmth of the sun on his face. It was the perfect day for a bike ride.</p>
+
+    <p>Suddenly, Arif heard a loud hissing sound. He stopped and looked down to see his front tire going flat. His heart sank. He was still far from the park and didn't have a spare tube or pump with him.</p>
+
+    <p>Feeling a bit helpless, Arif walked his bike to the side of the road. He remembered his father's advice to always stay calm and think of a solution. Arif decided to walk his bike back home, even though it was a long way.</p>
+
+    <p>On his way back, Arif saw his neighbor, Mr. Hasan, working in his garden. Mr. Hasan noticed Arif's flat tire and called out, "Do you need some help?" Relieved, Arif explained what had happened. Mr. Hasan smiled and invited him into his garage.</p>
+
+    <p>Mr. Hasan had all the tools needed to fix the flat tire. He showed Arif how to remove the wheel, find the hole, and patch it up. Arif watched carefully, grateful for the help. Within a short time, the tire was as good as new.</p>
+
+    <p>Arif thanked Mr. Hasan and happily rode his bike home. He had learned something valuable that day: always be prepared and never hesitate to ask for help when needed. Despite the flat tire, it turned out to be a good day after all.</p>
+  </div>
+
+  <!-- Quiz Section -->
+  <div class="quiz-box">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <div class="question">
+        <p>1. Arif decided to ride his bike to the _______ to enjoy the sunny day.</p>
+        <input type="text" name="q1">
+      </div>
+
+      <div class="question">
+        <p>2. Arif heard a loud _______ sound before his tire went flat.</p>
+        <input type="text" name="q2">
+      </div>
+
+      <div class="question">
+        <p>3. Arif remembered his father's advice to stay _______ and think of a solution.</p>
+        <input type="text" name="q3">
+      </div>
+
+      <div class="question">
+        <p>4. Mr. Hasan helped Arif fix his tire in his _______.</p>
+        <input type="text" name="q4">
+      </div>
+
+      <div class="question">
+        <p>5. Arif learned to always be _______ for unexpected situations.</p>
+        <input type="text" name="q5">
+      </div>
+
+      <div class="question">
+        <p>6. Arif rode his bike _______ after the tire was fixed.</p>
+        <input type="text" name="q6">
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="vocab-flattire.html" class="back-vocab">Vocabulary</a>
+      <a href="index.html" class="back-home">🏠 Home</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const answers = {
+    q1: { correct: "park", explanation: "He rode his bike to the park." },
+    q2: { correct: "hissing", explanation: "Arif heard a loud hissing sound before the tire went flat." },
+    q3: { correct: "calm", explanation: "His father advised him to stay calm." },
+    q4: { correct: "garage", explanation: "Mr. Hasan helped him in his garage." },
+    q5: { correct: "prepared", explanation: "Arif learned to always be prepared." },
+    q6: { correct: "home", explanation: "After fixing the tire, Arif rode his bike home." }
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let total = Object.keys(answers).length;
+    let output = "";
+
+    for (let q in answers) {
+      const userInput = document.querySelector(`input[name="${q}"]`).value.trim().toLowerCase();
+      const correct = answers[q].correct.toLowerCase();
+
+      if (userInput === "") {
+        output += `<p><b>${q.toUpperCase()}</b>: ❌ Not answered — ${answers[q].explanation}</p>`;
+      } else if (userInput === correct) {
+        score++;
+        output += `<p><b>${q.toUpperCase()}</b>: ✅ Correct — ${answers[q].explanation}</p>`;
+      } else {
+        output += `<p><b>${q.toUpperCase()}</b>: ❌ Wrong — ${answers[q].explanation}</p>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      `<h3>You scored ${score} out of ${total}</h3>` + output;
+  }
+</script>
+
+</body>
+</html>

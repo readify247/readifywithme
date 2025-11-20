@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Little Red Riding Hood - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f8fb; margin:0; }
+    header { text-align:center; padding:14px 0; background:white; box-shadow:0 1px 0 rgba(0,0,0,0.05); }
+    header h1 { margin:0; color:#173b8a; font-size:26px; }
+    .container { display:flex; gap:26px; max-width:1150px; margin:32px auto; padding:0 14px; }
+    .reading-section, .quiz-section {
+      background:white; border-radius:12px; padding:22px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.08);
+      max-height:80vh; overflow:auto;
+    }
+    .reading-section { flex:1.2; }
+    .quiz-section { flex:0.9; }
+
+    h2 { margin-top:0; color:#1e3a8a; }
+
+    .story p {
+      text-align:justify;
+      margin-bottom:18px;
+      line-height:1.7;
+      color:#222;
+    }
+
+    .question { margin-bottom:18px; }
+    .question p { font-weight:700; margin-bottom:8px; }
+
+    select, input[type="text"] {
+      width:100%; padding:10px; border-radius:6px;
+      border:1px solid #ccc; font-size:15px; margin-top:4px;
+    }
+
+    button {
+      background:#2563eb; color:white;
+      padding:12px 18px; border:none; border-radius:8px;
+      cursor:pointer; font-weight:700; margin-top:10px;
+    }
+    button:hover { background:#1e40af; }
+
+    #result { margin-top:18px; line-height:1.6; }
+
+    .back-buttons {
+      margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;
+    }
+
+    .back-buttons a {
+      text-decoration:none; padding:10px 16px; border-radius:8px; font-weight:600;
+    }
+
+    .back-home { background:#2563eb; color:white; }
+    .back-home:hover { background:#1e40af; }
+
+    .back-vocab {
+      background:#f3f4f6; border:1px solid #2563eb; color:#2563eb;
+    }
+    .back-vocab:hover { background:#e0e7ff; }
+
+    @media(max-width:900px){
+      .container { flex-direction:column; }
+      .reading-section, .quiz-section { max-height:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header><h1>Readify 24/7</h1></header>
+
+<div class="container">
+
+  <!-- READING -->
+  <div class="reading-section">
+    <h2>Little Red Riding Hood</h2>
+
+    <div class="story">
+      <p>One day there was a little girl named Little Red Riding Hood. She was asked by her mother to deliver cake to her grandmother. When she was heading for her grandmother's house, Little Red Riding Hood met a wolf. "Where are you going, little girl?" the wolf asked. "I'm bringing this cake to my grandmother," replied Little Red Riding Hood.</p>
+
+      <p>The wolf had an evil plan because he wanted to eat them both. Then he ran through a shortcut to her grandmother's house. After arriving there, he knocked on the door. When Grandma opened it, the wolf caught her and locked her in a closet. The bad wolf then wore Grandma's clothes and laid in bed, waiting for Little Red Riding Hood.</p>
+
+      <p>When Little Red Riding Hood arrived, the wolf in disguise told her to come in. She did not realize that it was the wolf. Then the wolf ate Little Red Riding Hood and her grandmother. After eating them, the wolf fell asleep beside the river.</p>
+
+      <p>Suddenly, a woodcutter came. He saw the wolf's large belly and knew what had happened. He saved them by releasing them from the wolf's belly and filled the wolf's stomach with a big stone. Then he threw the wolf into the river.</p>
+    </div>
+
+    <p style="font-size:13px;color:#666;"><i>Source: Adapted children's tale.</i></p>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="quiz-section">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <!-- MULTIPLE CHOICE -->
+      <div class="question">
+        <p>1. Why did Little Red Riding Hood go to the forest?</p>
+        <select name="q1">
+          <option value="">-- choose --</option>
+          <option value="b">To deliver cake to her grandmother</option>
+          <option value="a">To play with her friends</option>
+          <option value="c">To find flowers</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>2. What did the wolf do at Grandma’s house?</p>
+        <select name="q2">
+          <option value="">-- choose --</option>
+          <option value="b">Locked Grandma in a closet and disguised himself</option>
+          <option value="a">Helped Grandma knit</option>
+          <option value="c">Ran away</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>3. Who saved Little Red Riding Hood and her grandmother?</p>
+        <select name="q3">
+          <option value="">-- choose --</option>
+          <option value="c">A woodcutter</option>
+          <option value="a">A policeman</option>
+          <option value="b">A farmer</option>
+        </select>
+      </div>
+
+      <!-- TRUE/FALSE (NO REASON) -->
+      <div class="question">
+        <p>4. The wolf wanted to eat Little Red Riding Hood and her grandmother. (True/False)</p>
+        <select name="q4">
+          <option value="">-- choose --</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>5. Little Red Riding Hood immediately recognized the wolf. (True/False)</p>
+        <select name="q5">
+          <option value="">-- choose --</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>6. The wolf fell asleep after eating them. (True/False)</p>
+        <select name="q6">
+          <option value="">-- choose --</option>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+
+      <!-- VOCAB IN CONTEXT -->
+      <div class="question">
+        <p>7. “Disguise” in the story means…</p>
+        <select name="q7">
+          <option value="">-- choose --</option>
+          <option value="a">A way to hide someone's identity</option>
+          <option value="b">A friendly greeting</option>
+          <option value="c">A kind of food</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <p>8. “Shortcut” means…</p>
+        <select name="q8">
+          <option value="">-- choose --</option>
+          <option value="b">A shorter and faster route</option>
+          <option value="a">A long path</option>
+          <option value="c">A dangerous bridge</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="vocab-redriding.html" class="back-vocab">📘 Vocabulary</a>
+      <a href="index.html" class="back-home">🏠 Home</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const answers = {
+    q1: "b",
+    q2: "b",
+    q3: "c",
+    q4: "true",
+    q5: "false",
+    q6: "true",
+    q7: "a",
+    q8: "b"
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let total = 8;
+    let output = "";
+
+    for (let q in answers) {
+      let user = document.querySelector(`[name="${q}"]`).value.trim().toLowerCase();
+      let correct = answers[q];
+
+      if (user === correct) {
+        score++;
+        output += `<p><b>${q.toUpperCase()}</b> ✅ Correct</p>`;
+      } else if (user === "") {
+        output += `<p><b>${q.toUpperCase()}</b> ❌ No answer</p>`;
+      } else {
+        output += `<p><b>${q.toUpperCase()}</b> ❌ Wrong</p>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      `<h3>Your Score: ${score}/${total}</h3>` + output;
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Day I Almost Gave Up – Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-section">
+      <h2>The Day I Almost Gave Up</h2>
+      <div class="story">
+
+        <p>When I was in junior high school, I experienced something I will never forget. It happened during my second year. At first, everything felt normal. I had a few friends, and I enjoyed my classes. But one day, everything changed.</p>
+
+        <p>A group of older students started making fun of me. It began with simple jokes about my appearance. I tried to ignore them, but the teasing became worse. They started calling me names in the hallway and laughing loudly whenever I passed by. I felt embarrassed, angry, and alone. I didn't tell anyone at first because I was afraid things would get worse.</p>
+
+        <p>The worst moment happened after school. I was walking home when the group followed me and took my backpack. They threw it into a muddy puddle and laughed while I stood there, shocked and helpless. I remember going home in tears, feeling like I didn't belong anywhere.</p>
+
+        <p>That night, I thought about quitting school. I had no motivation and was afraid to face them again. But then my older sister noticed something was wrong. She asked me gently, and I finally opened up to her. She immediately told our parents, and together we spoke to my school counselor the next day.</p>
+
+        <p>The school took it seriously. The bullies were given punishment and had to attend a counseling program. Slowly, I started feeling safe again. I joined a writing club and made new friends who supported me. That experience taught me that speaking up is not a weakness — it's a way to protect yourself and others.</p>
+
+        <p>Now, whenever I see someone being bullied, I try my best to help. I don't want anyone else to feel the way I did.</p>
+
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <div class="question">
+          <p>1. The bullying started with simple jokes about the writer’s _______.</p>
+          <input type="text" name="q1" />
+        </div>
+
+        <div class="question">
+          <p>2. The group of older students took the writer’s _______ and threw it into a puddle.</p>
+          <input type="text" name="q2" />
+        </div>
+
+        <div class="question">
+          <p>3. The writer went home in _______ after the bullying incident.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <div class="question">
+          <p>4. The writer thought about quitting _______ that night.</p>
+          <input type="text" name="q4" />
+        </div>
+
+        <div class="question">
+          <p>5. The person who first noticed something was wrong was the writer’s _______ sister.</p>
+          <input type="text" name="q5" />
+        </div>
+
+        <div class="question">
+          <p>6. The school counselor was informed the _______ day.</p>
+          <input type="text" name="q6" />
+        </div>
+
+        <div class="question">
+          <p>7. The writer joined a _______ club and made supportive friends.</p>
+          <input type="text" name="q7" />
+        </div>
+
+        <div class="question">
+          <p>8. The writer learned that speaking up is not a _______.</p>
+          <input type="text" name="q8" />
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-gaveup.html" class="btn-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "appearance", explanation: "The bullying began with jokes about the writer’s appearance." },
+      q2: { correct: "backpack", explanation: "The bullies took the writer’s backpack and threw it into a muddy puddle." },
+      q3: { correct: "tears", explanation: "The writer went home in tears after the incident." },
+      q4: { correct: "school", explanation: "The writer thought about quitting school." },
+      q5: { correct: "older", explanation: "The writer’s older sister noticed something was wrong." },
+      q6: { correct: "next", explanation: "The counselor was informed the next day." },
+      q7: { correct: "writing", explanation: "The writer joined a writing club and made new supportive friends." },
+      q8: { correct: "weakness", explanation: "The writer learned that speaking up is not a weakness." }
+    };
+
+    function normalize(text) {
+      return text.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const inputEl = document.querySelector(`input[name="${q}"]`);
+        const userAnswer = normalize(inputEl.value);
+        const correctAnswer = normalize(answers[q].correct);
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

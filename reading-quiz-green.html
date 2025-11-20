@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Green Hero – Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section { flex: 1.2; }
+    .quiz-section { flex: 0.8; }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 { color: #2563eb; }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 18px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      border: 1px solid #2563eb;
+      color: #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .reading-section, .quiz-section { max-height: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header" style="text-align:center; padding:10px 0;">
+  <h1>Readify 24/7</h1>
+</header>
+
+<div class="container">
+
+  <!-- READING SECTION -->
+  <div class="reading-section">
+    <h2>The Green Hero</h2>
+    <div class="story">
+
+      <p>Once upon a time in a quiet village called Wana Lestari, there lived a 13-year-old boy named Bima. He was known among his friends as a curious and kind-hearted student. Bima loved nature. He often spent his free time exploring the forest near his school, watching birds and collecting leaves to study.</p>
+
+      <p>One day, Bima noticed something strange. The river near his village, once clean and full of fish, had turned brown and smelly. Plastic bottles, food wrappers, and garbage floated everywhere. He felt sad and worried. “What happened to our beautiful river?” he asked himself.</p>
+
+      <p>Bima couldn’t ignore it. The next day, he spoke to his teacher and suggested starting a “Green Patrol” team. Some friends joined him; together, they made posters and asked people not to throw trash into the river. They even organized a cleaning day. At first, not everyone supported them. Some friends laughed and said, “You’re just kids!”</p>
+
+      <p>But Bima and his friends didn’t give up. Week after week, they cleaned the river and educated others. Slowly, more people joined them. In three months, the river looked much better. Fish started to return, and children could play by the riverside again.</p>
+
+      <p>From that day on, Bima was called The Green Hero of Wana Lestari. He proved that age didn’t matter when someone wanted to make a change. His story inspired other schools to start their own Green Patrol teams across the region.</p>
+
+    </div>
+
+    <p style="font-size:13px; color:#6b7280; margin-top:20px;">
+      Story adapted and rewritten based on practice materials from TKA English resources. All rights to the original materials belong to their respective publishers.
+    </p>
+
+  </div>
+
+  <!-- QUIZ SECTION -->
+  <div class="quiz-section">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <div class="question">
+        <p>1. The once-clear river had turned _______ and full of garbage.</p>
+        <input type="text" name="q1" />
+      </div>
+
+      <div class="question">
+        <p>2. Bima decided to take _______ and create a Green Patrol team.</p>
+        <input type="text" name="q2" />
+      </div>
+
+      <div class="question">
+        <p>3. Many villagers were _______ of Bima’s idea at first.</p>
+        <input type="text" name="q3" />
+      </div>
+
+      <div class="question">
+        <p>4. Bima designed posters to _______ people about protecting the environment.</p>
+        <input type="text" name="q4" />
+      </div>
+
+      <div class="question">
+        <p>5. The team continued to clean the river week after _______.</p>
+        <input type="text" name="q5" />
+      </div>
+
+      <div class="question">
+        <p>6. Their dedication began to _______ others to join.</p>
+        <input type="text" name="q6" />
+      </div>
+
+      <div class="question">
+        <p>7. Fish started to _______ after months of effort.</p>
+        <input type="text" name="q7" />
+      </div>
+
+      <div class="question">
+        <p>8. True leadership has nothing to do with _______.</p>
+        <input type="text" name="q8" />
+      </div>
+
+      <div class="question">
+        <p>9. The people began to see Bima as their _______.</p>
+        <input type="text" name="q9" />
+      </div>
+
+      <div class="question">
+        <p>10. Bima’s movement inspired other _______ to start similar projects.</p>
+        <input type="text" name="q10" />
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="index.html" class="btn-home">🏠 Back to Home</a>
+      <a href="vocab-green.html" class="btn-vocab">📚 Vocabulary</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const answers = {
+    q1: { correct: "brown", explanation:"The river turned brown and full of garbage."},
+    q2: { correct: "action", explanation:"He decided to take action and start the Green Patrol."},
+    q3: { correct: "skeptical", explanation:"Many villagers were skeptical at first."},
+    q4: { correct: "raise", explanation:"He designed posters to raise awareness."},
+    q5: { correct: "week", explanation:"They cleaned the river week after week."},
+    q6: { correct: "inspire", explanation:"Their dedication began to inspire others."},
+    q7: { correct: "return", explanation:"Fish started to return."},
+    q8: { correct: "age", explanation:"Leadership has nothing to do with age."},
+    q9: { correct: "hero", explanation:"People began to see him as a hero."},
+    q10:{ correct:"villages", explanation:"His movement inspired other villages."}
+  };
+
+  function submitQuiz() {
+    let score = 0;
+    let output = "";
+    const total = Object.keys(answers).length;
+
+    for (let q in answers) {
+      const input = document.querySelector(`input[name="${q}"]`);
+      const user = input.value.trim().toLowerCase();
+      const correct = answers[q].correct.toLowerCase();
+
+      if (user === correct) {
+        score++;
+        output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+      } else if (user === "") {
+        output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+      } else {
+        output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      `<h3>You scored ${score} out of ${total}</h3>` + output;
+  }
+</script>
+
+</body>
+</html>

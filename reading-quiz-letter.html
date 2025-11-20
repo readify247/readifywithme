@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last Letter – Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section { flex: 1.2; }
+    .quiz-section { flex: 0.8; }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question { margin-bottom: 18px; }
+    .question p { font-weight: bold; margin-bottom: 8px; }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home { background: #2563eb; color: #fff; }
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container { flex-direction: column; }
+      .reading-section, .quiz-section { max-height: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-section">
+      <h2>The Last Letter</h2>
+      <div class="story">
+
+        <p>When Emma opened the old wooden box hidden in her grandmother's attic, she had no idea it would change everything she believed about her family. The box was covered in dust and sealed with a rusted clasp. Inside, she found a bundle of letters tied together with a red ribbon, the ink faded but still readable. The top letter was addressed to her grandfather, who had passed away ten years ago.</p>
+
+        <p>Curious, Emma sat near the attic window and began to read. It was written by a woman named Clara—not her grandmother—and it was dated back to 1957. The words were filled with longing, regret, and deep affection. As Emma read more, she realized Clara had been her grandfather’s first love, someone he had promised to marry before suddenly leaving town.</p>
+
+        <p>The letters told the story of a love torn apart by family pressure and social expectations. Clara had waited years for his return, and her final letter—the last one in the box—was never sent. In it, she forgave him and hoped he had found happiness, even if it wasn't with her. Emma felt as though she had stepped into a forgotten chapter of her family’s history.</p>
+
+        <p>Later that evening, she shared the story with her mother, who was just as surprised. They decided to keep the letters not as a secret, but as a memory—a reminder that the past often holds untold stories that shape who we are.</p>
+
+        <p>As Emma placed the last letter back in the box, she whispered, “Thank you, Clara,” feeling as if a ghost had finally been heard.</p>
+
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <div class="question">
+          <p>1. Emma found the old wooden box in her grandmother’s _______.</p>
+          <input type="text" name="q1" />
+        </div>
+
+        <div class="question">
+          <p>2. The letters were tied with a _______ ribbon.</p>
+          <input type="text" name="q2" />
+        </div>
+
+        <div class="question">
+          <p>3. The letters were addressed to Emma’s _______.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <div class="question">
+          <p>4. The woman who wrote the letters was named _______.</p>
+          <input type="text" name="q4" />
+        </div>
+
+        <div class="question">
+          <p>5. Clara was the grandfather’s first _______.</p>
+          <input type="text" name="q5" />
+        </div>
+
+        <div class="question">
+          <p>6. Clara’s final letter was never _______.</p>
+          <input type="text" name="q6" />
+        </div>
+
+        <div class="question">
+          <p>7. Emma shared the discovery with her _______.</p>
+          <input type="text" name="q7" />
+        </div>
+
+        <div class="question">
+          <p>8. At the end, Emma whispered “Thank you, _______.”</p>
+          <input type="text" name="q8" />
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-letter.html" class="btn-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "attic", explanation: "Emma found the box in her grandmother's attic." },
+      q2: { correct: "red", explanation: "The letters were tied with a red ribbon." },
+      q3: { correct: "grandfather", explanation: "The top letter was addressed to her grandfather." },
+      q4: { correct: "clara", explanation: "The letters were written by a woman named Clara." },
+      q5: { correct: "love", explanation: "Clara was her grandfather's first love." },
+      q6: { correct: "sent", explanation: "Clara’s last letter was never sent." },
+      q7: { correct: "mother", explanation: "Emma shared the story with her mother." },
+      q8: { correct: "clara", explanation: "Emma whispered 'Thank you, Clara' at the end." }
+    };
+
+    function normalize(text) {
+      return text.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const inputEl = document.querySelector(`input[name="${q}"]`);
+        const userAnswer = normalize(inputEl.value);
+        const correctAnswer = normalize(answers[q].correct);
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

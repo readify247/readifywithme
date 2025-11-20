@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Experience in Porseni – Reading & Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+    }
+
+    .container {
+      display: flex;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .reading-section, .quiz-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      max-height: 85vh;
+    }
+
+    .reading-section {
+      flex: 1.2;
+    }
+
+    .quiz-section {
+      flex: 0.8;
+    }
+
+    .story p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .quiz-section h2 {
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .question {
+      margin-bottom: 18px;
+    }
+
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background: #2563eb;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover { background: #1e40af; }
+
+    #result {
+      margin-top: 16px;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .back-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .back-buttons a {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-home {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-vocab {
+      background: #f3f4f6;
+      color: #2563eb;
+      border: 1px solid #2563eb;
+    }
+
+    .btn-home:hover { background: #1e40af; }
+    .btn-vocab:hover { background: #e0e7ff; }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .reading-section, .quiz-section {
+        max-height: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" style="text-align:center; padding:10px 0;">
+    <h1>Readify 24/7</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- READING SECTION -->
+    <div class="reading-section">
+      <h2>My Experience in Porseni</h2>
+      <div class="story">
+
+        <p>Last year in December, my school held a sports event called Porseni. On that day, all classes prepared their best students in sports and arts, including my class. We worked together to improve and decorate our garden and classroom in order to be the best in the upcoming Porseni. One week before the event, we prepared by adding grass to the garden to make it look greener and cooler. We also cleaned our classroom thoroughly.</p>
+
+        <p>The event finally took place at 6:30 a.m. I wore my costume made from newspapers. All the students decided to wear the same style of costume to make the celebration more attractive. We did a parade around our town, Bone. This tour is called the Devile Parade. After the parade, we returned to school. My body felt tired, but we were excited to learn that we won second place among all classes. We celebrated together with joy.</p>
+
+        <p>On the second day, there were several sports competitions, such as takraw ball, volleyball, tug of war, and basketball. Luckily, my class played in the first round for each game. The results were excellent because all of our teams made it to the second round. The second day ended at 3 p.m., and all team members were asked to rest well for the next day.</p>
+
+        <p>On the third day, unfortunately, our basketball team lost the match against the eleventh-grade team. The game was very intense and the score was very close. However, a mistake happened in the last minute. One member accidentally passed the ball to the opponent, and they scored the final point. The referee blew the whistle and ended the match.</p>
+
+        <p>Day by day, our teams kept losing. Maybe we had less experience compared to other classes. However, we were not too disappointed. At least, we became the second winner in the parade contest. I hope that next year we can win more matches.</p>
+
+      </div>
+    </div>
+
+    <!-- QUIZ SECTION -->
+    <div class="quiz-section">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+
+        <div class="question">
+          <p>1. The event held by the writer’s school was called _______.</p>
+          <input type="text" name="q1" />
+        </div>
+
+        <div class="question">
+          <p>2. The writer’s costume was made from _______.</p>
+          <input type="text" name="q2" />
+        </div>
+
+        <div class="question">
+          <p>3. The parade around the town was called the _______ Parade.</p>
+          <input type="text" name="q3" />
+        </div>
+
+        <div class="question">
+          <p>4. On the second day, all of the writer’s teams made it to the _______ round.</p>
+          <input type="text" name="q4" />
+        </div>
+
+        <div class="question">
+          <p>5. The sport the writer’s team lost was _______.</p>
+          <input type="text" name="q5" />
+        </div>
+
+        <div class="question">
+          <p>6. The mistake in the basketball game happened in the last _______.</p>
+          <input type="text" name="q6" />
+        </div>
+
+        <div class="question">
+          <p>7. The opponent team that won was the _______ grade team.</p>
+          <input type="text" name="q7" />
+        </div>
+
+        <div class="question">
+          <p>8. The writer’s class became the second winner in the _______ contest.</p>
+          <input type="text" name="q8" />
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result"></div>
+
+      <div class="back-buttons">
+        <a href="index.html" class="btn-home">🏠 Back to Home</a>
+        <a href="vocab-porseni.html" class="btn-vocab">📚 Vocabulary</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const answers = {
+      q1: { correct: "porseni", explanation: "The school held a sports and arts event called Porseni." },
+      q2: { correct: "newspapers", explanation: "The writer wore a costume made from newspapers." },
+      q3: { correct: "devile", explanation: "The parade around the town was called the Devile Parade." },
+      q4: { correct: "second", explanation: "All teams made it to the second round." },
+      q5: { correct: "basketball", explanation: "The team lost in the basketball match." },
+      q6: { correct: "minute", explanation: "The mistake happened in the last minute of the game." },
+      q7: { correct: "eleventh", explanation: "The team lost against the eleventh grade team." },
+      q8: { correct: "parade", explanation: "They became the second winner in the parade contest." }
+    };
+
+    function normalize(text) {
+      return text.trim().toLowerCase().replace(/\s+/g, ' ');
+    }
+
+    function submitQuiz() {
+      let score = 0;
+      let total = Object.keys(answers).length;
+      let output = "";
+
+      for (let q in answers) {
+        const inputEl = document.querySelector(`input[name="${q}"]`);
+        const userAnswer = normalize(inputEl.value);
+        const correctAnswer = normalize(answers[q].correct);
+
+        if (userAnswer === correctAnswer) {
+          score++;
+          output += `<p><b>${q.toUpperCase()} Correct!</b> ✅ ${answers[q].explanation}</p>`;
+        } else if (userAnswer === "") {
+          output += `<p><b>${q.toUpperCase()} Not answered.</b> ❌ ${answers[q].explanation}</p>`;
+        } else {
+          output += `<p><b>${q.toUpperCase()} Wrong!</b> ❌ ${answers[q].explanation}</p>`;
+        }
+      }
+
+      output = `<h3>You scored ${score} out of ${total}</h3>` + output;
+      document.getElementById("result").innerHTML = output;
+      document.getElementById("result").scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>

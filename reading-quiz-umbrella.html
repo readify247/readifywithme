@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Magic Umbrella - Reading & Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f8fb; }
+    .container { max-width: 1200px; margin: 30px auto; display: flex; gap: 25px; }
+    .reading-box, .quiz-box {
+      background: #fff; padding: 25px; border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      width: 50%; overflow-y: auto; max-height: 85vh;
+    }
+    .reading-box h2, .quiz-box h2 { color:#1e40af; margin-top:0; }
+    .reading-box p { text-align:justify; line-height:1.7; margin-bottom:14px; }
+
+    .question { margin-bottom: 22px; }
+    .question p { font-weight: 600; margin-bottom: 8px; }
+    .options label {
+      display:block; background:#f3f4f6; padding:8px 10px;
+      border-radius:8px; margin-bottom:6px; cursor:pointer;
+    }
+    .options label:hover { background:#e5e7eb; }
+
+    select { padding:8px; width:100%; border-radius:6px; border:1px solid #ccc; }
+
+    button {
+      background:#2563eb; color:#fff; padding:12px 18px;
+      border:none; border-radius:8px; font-size:16px; cursor:pointer;
+      margin-top:12px;
+    }
+    button:hover { background:#1e40af; }
+
+    #result { margin-top:20px; font-size:16px; line-height:1.6; }
+
+    .back-buttons { margin-top:25px; display:flex; gap:10px; }
+    .back-buttons a {
+      text-decoration:none; padding:10px 16px;
+      border-radius:8px; font-weight:600;
+    }
+    .back-home { background:#2563eb; color:white; }
+    .back-vocab {
+      background:#f3f4f6; border:1px solid #2563eb; color:#2563eb;
+    }
+    .back-home:hover { background:#1e40af; }
+    .back-vocab:hover { background:#e0e7ff; }
+
+    @media(max-width:900px){
+      .container{ flex-direction:column; }
+      .reading-box, .quiz-box{ width:100%; max-height:none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<h1 style="text-align:center; margin-top:20px;">Readify 24/7</h1>
+
+<div class="container">
+
+  <!-- READING -->
+  <div class="reading-box">
+    <h2>The Magic Umbrella</h2>
+
+    <p>Lina found an old umbrella in her grandmother's attic. It looked normal, but when she opened it, the umbrella glowed. Suddenly, Lina was flying in the sky. She screamed, but the umbrella carried her safely through the clouds.</p>
+
+    <p>She flew over mountains, oceans, and forests. She saw animals talking and trees dancing. It was a magical world. After some time, she landed in a village where everyone was sad. They lost their sunlight because a dark cloud wouldn't go away.</p>
+
+    <p>Lina used her magic umbrella and flew into the cloud. She found a bird trapped inside. The bird was the Sun Bird, and without it, the sun couldn't shine. Lina opened the umbrella wide, and the bird flew out.</p>
+
+    <p>The cloud disappeared, and the sun returned. The people cheered and called Lina their hero. When she returned home, she kept the umbrella safe. But every time it rains, she wonders: “Is it time for another adventure?”</p>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="quiz-box">
+    <h2>Quiz</h2>
+
+    <form id="quizForm">
+
+      <!-- Q1 Multiple Choice -->
+      <div class="question">
+        <p>1. What happened when Lina opened the umbrella?</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="a"> It broke into pieces.</label>
+          <label><input type="radio" name="q1" value="b"> It glowed and made her fly.</label>
+          <label><input type="radio" name="q1" value="c"> It disappeared.</label>
+        </div>
+      </div>
+
+      <!-- Q2 Vocabulary in context -->
+      <div class="question">
+        <p>2. The word “glowed” most nearly means…</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="a"> To shine with light</label>
+          <label><input type="radio" name="q2" value="b"> To shake strongly</label>
+          <label><input type="radio" name="q2" value="c"> To turn cold</label>
+        </div>
+      </div>
+
+      <!-- Q3 True / False -->
+      <div class="question">
+        <p>3. True or False: The village lost sunlight because a dark cloud stayed above them.</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="true"> True</label>
+          <label><input type="radio" name="q3" value="false"> False</label>
+        </div>
+      </div>
+
+      <!-- Q4 True/False (HOTS) -->
+      <div class="question">
+        <p>4. True or False: The Sun Bird escaped on its own without Lina's help.</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="true"> True</label>
+          <label><input type="radio" name="q4" value="false"> False</label>
+        </div>
+      </div>
+
+      <!-- Q5 Matching -->
+      <div class="question">
+        <p>5. Match the items:</p>
+        <p>1 = Dark cloud<br>2 = Sun Bird<br>3 = Magic Umbrella</p>
+
+        <p>A. Helped Lina fly  
+          <select name="q5a">
+            <option value="">--</option><option value="3">3</option><option value="1">1</option><option value="2">2</option>
+          </select>
+        </p>
+
+        <p>B. Caused the village to lose sunlight  
+          <select name="q5b">
+            <option value="">--</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+          </select>
+        </p>
+
+        <p>C. Needed to be freed  
+          <select name="q5c">
+            <option value="">--</option><option value="2">2</option><option value="1">1</option><option value="3">3</option>
+          </select>
+        </p>
+      </div>
+
+      <!-- Q6 Ordering -->
+      <div class="question">
+        <p>6. Put the events in the correct order:</p>
+        <p>A = Lina opened the umbrella<br>B = Lina landed in the sad village<br>C = Lina freed the Sun Bird</p>
+
+        <p>A: <select name="q6a"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+        <p>B: <select name="q6b"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+        <p>C: <select name="q6c"><option>--</option><option>1</option><option>2</option><option>3</option></select></p>
+      </div>
+
+      <!-- Q7 Inference -->
+      <div class="question">
+        <p>7. What can be inferred about Lina?</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="a"> She is brave and helpful.</label>
+          <label><input type="radio" name="q7" value="b"> She is afraid of everything.</label>
+          <label><input type="radio" name="q7" value="c"> She does not like adventures.</label>
+        </div>
+      </div>
+
+      <!-- Q8 Summarizing -->
+      <div class="question">
+        <p>8. Which sentence best summarizes the story?</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="a"> Lina used a magical umbrella to save a village by freeing the Sun Bird.</label>
+          <label><input type="radio" name="q8" value="b"> Lina wanted to buy a new umbrella from the store.</label>
+          <label><input type="radio" name="q8" value="c"> The forest was dangerous and Lina got lost.</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <div class="back-buttons">
+      <a href="index.html" class="back-home">🏠 Back to Home</a>
+      <a href="vocab-umbrella.html" class="back-vocab">📚 Vocabulary</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function submitQuiz(){
+  let score=0;
+  let out="";
+
+  const ans={
+    q1:"b",
+    q2:"a",
+    q3:"true",
+    q4:"false",
+    q5:{a:"3",b:"1",c:"2"},
+    q6:{a:"1",b:"2",c:"3"},
+    q7:"a",
+    q8:"a"
+  };
+
+  const exp={
+    q1:"The umbrella glowed and made her fly.",
+    q2:"Glowed means shining with light.",
+    q3:"A dark cloud blocked the sunlight.",
+    q4:"Lina freed the Sun Bird, not itself.",
+    q5:"A=3 (umbrella), B=1 (cloud), C=2 (Sun Bird).",
+    q6:"Order: Open umbrella → Land in village → Free Sun Bird.",
+    q7:"She is brave and helps others.",
+    q8:"The story is about Lina saving a village with a magical umbrella."
+  };
+
+  ["q1","q2","q3","q4","q7","q8"].forEach(q=>{
+    const user=document.querySelector(`input[name="${q}"]:checked`);
+    if(!user){
+      out+=`<p>${q.toUpperCase()} Not answered ❌ — ${exp[q]}</p>`;
+    } else if(user.value===ans[q]){
+      score++; out+=`<p>${q.toUpperCase()} Correct! ✅ — ${exp[q]}</p>`;
+    } else {
+      out+=`<p>${q.toUpperCase()} Wrong ❌ — ${exp[q]}</p>`;
+    }
+  });
+
+  const q5a=document.querySelector('select[name="q5a"]').value;
+  const q5b=document.querySelector('select[name="q5b"]').value;
+  const q5c=document.querySelector('select[name="q5c"]').value;
+  if(q5a===ans.q5.a && q5b===ans.q5.b && q5c===ans.q5.c){
+    score++; out+=`<p>Q5 Correct! ✅ — ${exp.q5}</p>`;
+  } else { out+=`<p>Q5 Incorrect ❌ — ${exp.q5}</p>`; }
+
+  const q6a=document.querySelector('select[name="q6a"]').value;
+  const q6b=document.querySelector('select[name="q6b"]').value;
+  const q6c=document.querySelector('select[name="q6c"]').value;
+  if(q6a===ans.q6.a && q6b===ans.q6.b && q6c===ans.q6.c){
+    score++; out+=`<p>Q6 Correct! ✅ — ${exp.q6}</p>`;
+  } else { out+=`<p>Q6 Incorrect ❌ — ${exp.q6}</p>`; }
+
+  document.getElementById("result").innerHTML =
+    `<h3>You scored ${score} out of 8</h3>` + out;
+}
+</script>
+
+</body>
+</html>
